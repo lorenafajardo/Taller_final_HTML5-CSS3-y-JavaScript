@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de condicionales en modo funciones</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    <header><h3>Taller 2: Condicionales modo fuciones</h3></header>
+<p>Ejercicios escritos en PSeInt con el perfil Estricto.</p>
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+    <article id="seccion1" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</i> </h4></p>
+    <pre class="codigo">
+
+    SubProceso dato<- capturar()
+        Definir dato Como Entero;
+        Escribir " ¿Cual es su edad (años) ";
+        Leer dato;
+    FinSubProceso
+    
+    
+    Proceso EjercicioI
+        Definir edad Como Entero;
+        edad<- capturar();
+        
+        si edad >= 18 Entonces
+            Escribir "Usted es mayor de Edad";
+        SiNo
+            Escribir "Usted es menor de Edad";
+        FinSi
+    FinProceso
+    
+    
+    </pre>    
+    <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+    <article id="seccion2" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</i> </h4></p>
+            
+    <pre class="codigo">
+    
+    SubProceso dato<- capturar()
+        Definir dato Como Entero;
+        Escribir " ¿Cual es su edad (años) ";
+        Leer dato;
+    FinSubProceso
+    
+    Proceso EjercicioII
+        Definir edad Como Entero;
+        edad<- capturar();
+        
+        si edad <= 18 Entonces
+            Escribir "Usted aun es un niño(a)";
+        SiNo
+            Escribir "Usted ya no pertenece a la categoria niño ";
+        FinSi
+    FinProceso
+             
+    </pre>
+    <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+    <article id="seccion3" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h4></p>
+                
+    <pre class="codigo">
+
+    SubProceso nombre <- capturai()
+        Definir nombre Como Caracter;
+        Escribir "Por favor, diligencie la siguiente información: ";
+        Escribir "  Nombre: ";
+        Leer nombre;
+    FinSubProceso
+    
+    SubProceso apellidos <- capturaii()
+        Definir apellidos Como Caracter;
+        Escribir "  Apellidos: ";
+        Leer apellidos;
+    FinSubProceso
+    
+    SubProceso edad <- capturaiii()
+        Definir edad Como Entero;;
+        Escribir "  Edad: ";
+        Leer edad;
+    FinSubProceso
+    
+    Proceso EjercicioIII
+        Definir edadi Como Entero;
+        Definir  nombrei, apellidosi Como Caracter;
+        
+        nombrei <- capturai();
+        apellidosi <- capturaii();
+        edadi<-capturaiii();
+        
+        
+        si edadi >= 18 Entonces
+    
+            Escribir   nombrei, " ", apellidosi, ", usted es mayor de edad, por lo tanto, 
+            puede entrar a la fiesta";
+            SiNo
+            Escribir   nombrei, " ", apellidosi,  ", usted es menor de edad, por lo tanto, 
+            no puede entrar a la fiesta, por favor devuelvase a su casa";
+        FinSi
+        
+    FinProceso                   
+    </pre>
+    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+    <article id="seccion4" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h4></p>
+    <pre class="codigo">
+    
+    SubProceso opcion <- capturai()
+		Definir opcion Como Entero;
+		Escribir "---------------------------------------";
+		Escribir "Bienvenido al proceso de alquiler de peliculas, a continuación se muestran las
+         peliculas disponibles para alquilar ";
+		Escribir "";
+		Escribir "  1. Spider-Man";
+		Escribir "  2. La liga de la justicia";
+		Escribir "  3. Culpable";
+		Escribir "  4. Disomnia";
+		Escribir "";
+		
+		Escribir " Desea alquilar alguna de las peliculas disponibles:  ";
+		Escribir " 1. SI";
+		Escribir " 2. NO";
+		
+		Leer opcion;
+		
+	FinSubProceso
+	
+	SubProceso opcionPelicula <- capturaii()
+		Definir opcionPelicula Como entero;
+		Escribir "";
+		Escribir "Seleccione el número de la pelicula que desea alquilar";
+		Escribir "  1. Spider-Man";
+		Escribir "  2. La liga de la justicia";
+		Escribir "  3. Culpable";
+		Escribir "  4. Disomnia";
+		
+		Leer opcionPelicula;
+	FinSubProceso
+	
+	SubProceso opcionRecepcion <- capturaiii()
+		Definir opcionRecepcion Como entero;
+		
+		Escribir "";
+		Escribir " Desea recibir la pelicula en su casa o en la Video Tienda?";
+		Escribir " 1. En la casa";
+		Escribir " 2. En la Video Tienda";
+		
+		Leer opcionRecepcion;
+		
+	FinSubProceso
+
+	Proceso EjercicioIV
+		
+		Definir opcioni,alquiler, recepcion Como Entero;
+		Definir peliculai, peliculaii, peliculaiii, peliculaiv Como Caracter; 
+		
+		opcioni <- capturai();
+		
+		Segun  opcioni hacer
+			1:
+				peliculai<- "Spider-Man";
+				peliculaii <- "La liga de la justicia";
+				peliculaiii <- "Culpable";
+				peliculaiv <- "Disomnia";
+				
+				alquiler <- capturaii();
+				Segun alquiler Hacer
+					1:
+						Escribir "";
+						Escribir " Usted selecciono la pelicula ", peliculai, " para alquilar";
+					2:
+						Escribir "";
+						Escribir " Usted selecciono la pelicula ", peliculaii, " para alquilar";
+					3:
+						Escribir "";
+						Escribir " Usted selecciono la pelicula ", peliculaiii, " para alquilar";
+					4:
+						Escribir "";
+						Escribir " Usted selecciono la pelicula ", peliculaiv, " para alquilar";
+				FinSegun
+				
+				Recepcion <- capturaiii();
+				
+				Segun recepcion Hacer
+					1:
+						Escribir "";
+						Escribir "Usted escogió recibir la pelicula en casa";
+						Escribir "Pronto llegará a su dirrección";
+					2:
+						Escribir "";
+						Escribir " Usted escogió recibir la pelicula en la Video Tienda, por ello tiene la 
+                        opción de realizar anotaciones de ser necesario ";
+						Escribir "Gracias";
+				FinSegun
+			2:
+				Escribir "";
+				Escribir "Ha sido un gusto atenderte. Vuelve pronto";
+				
+		FinSegun
+		
+	FinProceso                    
+                        
+    </pre>
+    <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+    <article id="seccion5" class="estiloDescripcion">
+    <p> <h4 class="descripcion">La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</h4></p>
+    <pre class="codigo">
+        
+    SubProceso opcion <- capturai()
+        Definir opcion Como Entero;
+        
+        Escribir "----------------- Bienvenido a Drogueria Mi Salud --------------------";
+        Escribir "                    Proceso de facturación ";
+        Escribir "";
+        Escribir "Escoja la opción que desea realizar";
+        Escribir " 1. Comprar producto";
+        Escribir " 2. Consultar precios";
+        Escribir " 3. Devoluciones";
+        
+        Leer opcion;
+        
+    FinSubProceso
+    
+    SubProceso opcionProducto <- capturaii()
+        Definir opcionProducto Como Entero;
+        Escribir "";
+        Escribir " A continuacion se presentan los productos disponibles, seleccione 
+        el número correspodiente para conocer las carcteriticas del producto";
+        Escribir " 1. Alcohol";
+        Escribir " 2. Gel antibacterial";
+        Escribir " 3. Antigripal";
+        
+        leer opcionProducto;
+        FinSubProceso
+    
+    SubProceso opcionComprar <- capturaiii()
+        Definir opcionComprar Como Entero;
+        Definir opcionProductoi Como Entero;
+        
+        opcionProductoi<- capturaii();
+        
+        Segun opcionProductoi Hacer
+            
+            1: 
+                Escribir "";
+                Escribir "Caracteristicas: Frasco Con 700 ml    -    Vía de administración: Topico - Externo";
+                Escribir "Desea comprar este producto?";
+                Escribir "1. Sí";
+                Escribir "2. No";
+                leer opcionComprar;
+            2:
+                Escribir "";
+                Escribir "Caracteristicas: Frasco Con 1000 mL  -   Antiséptico y desinfectante de 
+                uso externo.";
+                Escribir "Desea comprar este producto?";
+                Escribir "1. Sí";
+                Escribir "2. No";
+                leer opcionComprar;
+            3:
+                Escribir "";
+                Escribir "Comprimidos para aliviar los síntomas de la gripe que combina paracetamol,
+                 cafeína, butetamato y frenilefrina.";
+                Escribir "Desea comprar este producto?";
+                Escribir "1. Sí";
+                Escribir "2. No";
+                leer opcionComprar;
+        FinSegun
+        
+    FinSubProceso
+    
+    SubProceso precios <- mostrari()
+        Escribir "";
+        Escribir " Precios de productos disponibles";
+        Escribir " 1. Alcohol  -   $3.600";
+        Escribir " 2. Gel antibacterial -  $8.000"; 
+        Escribir " 3. Antigripal  -  $11.000";
+    FinSubProceso
+    
+    SubProceso devoluciones <- mostrarii()
+        definir documento Como Entero;
+        Definir producto Como Caracter;
+        Definir fecha Como Caracter;
+        
+        Escribir "";
+        Escribir "Proceso de Devolución";
+        Escribir "Por favor, diligencie la siguiente infomacion para realizar la devolución del producto ";
+        Escribir "Número de documento: ";
+        Leer documento;
+        Escribir "Tipo de Producto: ";
+        Leer producto;
+        Escribir "Fecha de compra: ";
+        Leer fecha;
+        
+        Escribir "";
+        Escribir " La solicitud para la devolución del producto ", producto, " asociado al 
+        comprador con número de identificación ", documento, " fue aceptada";
+                
+    FinSubProceso
+            
+    Proceso EjercicioV
+        
+        Definir opcioni Como Entero;
+        Definir opcionProductoi Como Entero;
+        Definir opcionComprari Como Entero;
+        Definir preciosi Como Caracter;
+        Definir devolucionesi Como Caracter;
+        
+        opcioni <- capturai();
+        
+        Segun opcioni Hacer
+            1:
+                opcionComprari <- capturaiii();
+                
+                Segun  opcionComprari hacer
+                    1:
+                        Escribir "Compra exitosa";
+                    2: 
+                        Escribir "Vuelva pronto";
+                FinSegun
+                
+            2: 
+                preciosi <- mostrari();
+                
+            3:
+                devolucionesi <-mostrarii();
+        FinSegun
+        
+    FinProceso                
+    </pre>
+    <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+     <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion6')"><h3> <b>Ejercicio 6 </b> </h3></button>
+    <article id="seccion6" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</h4></p>
+                            
+    <pre class="codigo">
+        
+    SubProceso opcionRegistrar<-capturai()
+		Definir opcionRegistrar Como entero;
+		Escribir "---------------------- Bienvenido a El Maquinista --------------------";
+		Escribir " Por favor, ingrese la opción a registrar";
+		Escribir " 1. Ingreso de motocicleta";
+		Escribir " 2. Salida de motocicleta";
+		
+		Leer opcionRegistrar;
+	FinSubProceso
+
+	subproceso ingreso <- capturaii()
+		Definir ingreso Como Caracter;
+		Definir placa, fechaIngreso,observaciones Como Caracter;
+		Escribir "Placa de la motocicleta: ";
+		Leer placa;
+		Escribir "Dia de ingreso: ";
+		leer fechaIngreso;
+		Escribir "Observaciones realizadas: ";
+		leer observaciones;
+		Escribir "---------------------------------------------------------------------";
+		Escribir " Registro Exitoso";
+	FinSubProceso
+
+	SubProceso salida <- capturaiii()
+		Definir  salida Como Caracter;
+		Definir placa, fechaSalida,arreglos, novedades Como Caracter;
+		Escribir "Placa de la motocicleta: ";
+		Leer placa;
+		Escribir "Dia de salida: ";
+		leer fechaSalida;
+		Escribir "Arreglos realizadas: ";
+		leer arreglos;
+		Escribir "Novedades: ";
+		Leer novedades;
+		Escribir "---------------------------------------------------------------------";
+		Escribir " Registro Exitoso";
+	FinSubProceso
+
+	Proceso EjecicioSeis
+		
+		Definir opcionEntrada Como Entero;
+		Definir ingreso Como Caracter;
+		Definir salida Como Caracter;
+		
+		opcionEntrada<- capturai();
+		
+		Segun opcionEntrada Hacer
+			1:
+				ingreso <- capturaii();
+			2: 
+				salida<- capturaiii;
+		FinSegun
+		Escribir "---------------------------------------------------------------------";
+		
+	FinProceso
+                                           
+    </pre>
+    <button type="button" onclick="ocultar('seccion6','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion7')"><h3> <b>Ejercicio 7 </b> </h3></button>
+    <article id="seccion7" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</h4></p>
+                    
+    <pre class="codigo">
+
+    SubProceso peso <- capturai()
+	Definir datoi, peso Como Real;
+	Escribir "   Peso (Kg): ";
+	Leer peso;
+    FinSubProceso
+
+    SubProceso estatura <- capturaii ()
+        Definir datoii, estatura Como Real;
+        Escribir "   Estatura (m)";
+        Leer estatura;
+    FinSubProceso
+
+    SubProceso imc<- valorImc(peso, estatura)
+        Definir imc Como Real;
+        peso<- capturai();
+        estatura<- capturaii();
+        imc <- peso/(estatura^2) ;
+        Escribir imc;
+    FinSubProceso
+
+    SubProceso clasificacioni <- mostrari()
+        Definir clasificacioni Como Caracter;
+        Escribir "Segun el valor de su IMC, usted se ecuentra en el rango de bajo peso";
+        Escribir "        ------------------------------------------------------------------";
+    FinSubProceso
+
+    SubProceso clasificacionii <- mostrarii()
+        Definir clasificacionii Como Caracter;
+        Escribir "Segun el valor de su IMC, usted se ecuentra en el rango de peso normal";
+        Escribir "         ------------------------------------------------------------------";
+    FinSubProceso
+
+    SubProceso clasificacioniii <- mostrariii()
+        Definir clasificacioniii Como Caracter;
+        Escribir "Segun el valor de su IMC, usted se ecuentra en el rango de sobrepeso";
+        Escribir "         ------------------------------------------------------------------";
+    FinSubProceso
+
+    SubProceso clasificacioniv <- mostrariv()
+        Definir clasificacioniv Como Caracter;
+        Escribir "Segun el valor de su IMC, usted se ecuentra en el rango de obeso";
+        Escribir "        -------------------------------------------------------------------";
+    FinSubProceso
+
+
+    Proceso EjercicioSiete
+	
+	Definir imc Como Real;
+	Definir clasificacioni, clasificacionii, clasificacioniii, clasificacioniv Como Caracter;
+	
+	Escribir "        ------------------ Secretaría de Salud Municipal -------------------";
+	Escribir " Por favor, ingrese la siguiente información para calcular su IMC (Índice de masa corporal)  ";
+
+	imc<- valorImc(80,2);
+
+		si imc <= 18.5 Entonces
+			clasificacioni <- mostrari();
+		FinSi
+		
+		si 18.5 < imc & imc <= 24.9 Entonces
+			clasificacionii <- mostrarii();
+		FinSi
+		
+		si 25 <= imc & imc <= 29.9 Entonces
+			clasificacioniii <- mostrariii();
+		FinSi
+		
+		si 30 <= imc Entonces
+			clasificacioniv <- mostrariv();
+		FinSi
+    FinProceso                                        
+    </pre>
+    <button type="button" onclick="ocultar('seccion7','descripcionOculta')">Cerrar</button>
+    </article> 
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion8')"><h3> <b>Ejercicio 8 </b> </h3></button>
+    <article id="seccion8" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</h4></p>
+                                    
+    <pre class="codigo">
+        
+    SubProceso opcion <- capturai()
+        Definir opcion Como Entero;
+        
+        Escribir "                ----------- Bienvenido ------------";
+        Escribir "Por favor, seleccione la opción a realizar";
+        Escribir " 1. Registrar pedido ";
+        Escribir " 2. Tortas disponibles ";
+        Escribir " 3. Registro de ventas diarias ";
+        leer opcion;
+    FinSubProceso
+    
+    SubProceso opcionPedido<- capturaii()
+        Definir opcionPedido Como Entero;
+        
+        escribir "¿Desea realizar un pedido?";
+        Escribir " 1. si";
+        Escribir " 2. no";
+        Leer opcionPedido;
+    FinSubProceso
+    
+    SubProceso pedido <- mostrari()
+        Definir pedido,sabor,decoracion como caracter;
+        Definir cantidad, valorTotal Como Entero;
+        
+        Escribir "Elija las caracteisticas del pedido";
+        Escribir "  - Sabor:  ";
+        Leer sabor;
+        Escribir "  - Cantidad (Porciones): ";
+        Leer cantidad;
+        Escribir "  - Decoración: ";
+        Leer decoracion;
+        Escribir "Valor a pagar";
+        Leer valorTotal;
+        
+        Escribir "Pedido registrado";
+        
+    FinSubProceso
+    
+    SubProceso disponibilidad <- mostrarii()
+        Escribir "Tortas disponibles";
+        Escribir " 1. Torta de chocolate";
+        Escribir " 2. Torta de vainilla";
+        Escribir " 3. Torta de naranja";
+        Escribir " 4. Torta de arequipe";
+    FinSubProceso
+    
+    SubProceso registro <- mostrariii()
+        Escribir " Ventas diarias ";
+        Escribir  "Las ventas diarias seran calculadas mediante el registro de pedidos ";	
+    FinSubProceso
+    
+    
+    Proceso EjercicioOcho
+        
+        Definir opcionEntrada, pedido Como Entero;
+        Definir registroPedido, disponibilidad,ventas Como Caracter;
+        
+        opcionEntrada <- capturai();
+        
+        Segun opcionEntrada Hacer
+            1: pedido <- capturaii();
+                
+                Segun pedido Hacer
+                    1:
+                        registroPedido <- mostrari();
+                    2:
+                        Escribir "  No se realizará nigun pedido";
+                FinSegun
+            2: 
+                disponibilidad<- mostrarii();
+            3: 
+                ventas <- mostrariii();
+                
+        FinSegun
+        
+    FinProceso                
+    </pre>
+    <button type="button" onclick="ocultar('seccion8','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion9')"><h3> <b>Ejercicio 9 </b> </h3></button>
+    <article id="seccion9" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h4></p>
+    <pre class="codigo">
+        
+    SubProceso opcion <- capturai()
+        Definir opcion Como Entero;
+        Escribir " Por favor, seleccione la figura geometrica a calcular el area";
+        Escribir " 1. Rectangulo";
+        Escribir " 2. Triangulo";
+        Escribir " 3. Trapecio";
+        
+        Leer opcion;
+    FinSubProceso
+    
+    SubProceso rectangulo <- mostrari()
+        Definir rectangulo Como Caracter;
+        Definir largo,ancho,area Como Real;
+        
+        Escribir " Escriba las medidas de las dimesiones correspondientes";
+        Escribir " Largo (cm) ";
+        Leer largo;
+        Escribir " Ancho (cm)";
+        Leer ancho;
+        
+        area <- largo * ancho;
+        
+        Escribir "El area del rectangulo es ", area, "cm";  
+    FinSubProceso
+    
+    SubProceso triangulo <- mostrarii()
+        Definir triangulo Como Caracter;
+        Definir base,altura,area Como Real;
+        Escribir " Escriba las medidas de las dimesiones correspondientes";
+        Escribir " Base (cm) ";
+        Leer base;
+        Escribir " Altura (cm)";
+        Leer altura;
+        area <- (base * altura)/2;
+        
+        Escribir "El area del triangulo es ", area, "cm";
+    FinSubProceso
+    
+    SubProceso trapecio <- mostrariii()
+        Definir trapecio Como Caracter;
+        Definir baseMayor, baseMenor, altura, area Como Real;
+        
+        Escribir " Escriba las medidas de las dimesiones correspondientes";
+        Escribir " Base mayor (cm) ";
+        Leer baseMayor;
+        Escribir " Base Menor (cm)";
+        Leer baseMenor;
+        Escribir " Altura (cm)";
+        Leer altura;
+        
+        area <- ((baseMayor + baseMenor)* altura)/2;
+        
+        Escribir "El area del trapecio es ", area, "cm";
+    FinSubProceso
+    
+    Proceso EjercicioNueve
+        Definir entrada Como Entero;
+        Definir areaRectagulo, areaTriangulo, areaTrapecio Como Caracter;
+        
+        Escribir "    --------- Calculadora de Areas -------------";
+        entrada <- capturai();
+        
+        Segun entrada Hacer
+            1: 
+                areaRectagulo <- mostrari();
+            2:
+                areaTriangulo <- mostrarii();
+            3:
+                areaTrapecio <- mostrariii();
+        FinSegun
+        
+        si (entrada <>1 y entrada <>2 y entrada <>3) Entonces
+            Escribir "Opción invalida";
+        FinSi
+        
+    FinProceso                  
+                       
+    </pre>
+    <button type="button" onclick="ocultar('seccion9','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+    
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion10')"><h3> <b>Ejercicio 10 </b> </h3></button>
+    <article id="seccion10" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</h4></p>
+                        
+    <pre class="codigo">
+
+    SubProceso opcion <- capturai()
+        definir opcion Como Entero;
+        
+        Escribir "Por favor, selecione la opcion a realizar";
+        Escribir " 1. Ingreso de dinero";
+        Escribir " 2. Retiro de dinero";
+        Escribir " 3. Consulta de saldo";
+        
+        Leer opcion;
+    FinSubProceso
+    
+    SubProceso cantidadDinero <- captura()
+        Definir cantidadDinero Como Entero;
+        cantidadDinero <- 5000;
+    FinSubProceso
+    
+    SubProceso titular <- mostrar()
+        Definir titular Como Caracter;
+        Escribir "Diligencie la información";
+        Escribir "Nombre del titular:";
+        Leer titular;
+    FinSubProceso
+    
+    SubProceso dinero <- capturaii()
+        Definir dinero Como Entero;
+        Escribir "Cantidad de dinero a (ingresar/retirar):  ";
+        Leer dinero;
+    FinSubProceso
+     
+    SubProceso ingreso<- mostrari()
+        Definir ingreso Como Caracter;
+        Definir dinero Como Entero;
+        
+        dinero <- capturaii(); 
+        si dinero > 0 Entonces
+            Escribir " Dinero ingresado correctamente";
+            
+        SiNo
+            Escribir "Valor invalido ";
+        FinSi
+    FinSubProceso
+    
+    SubProceso retiro <- mostrarii()
+        Definir retiro Como Caracter;
+        Definir dinero Como Entero;
+        Definir cantidad Como Entero;
+        
+        dinero<-capturaii();	
+        cantidad <- captura();
+        
+        si dinero <= cantidad Entonces
+            Escribir "Retiro exitoso";
+            cantidad<- cantidad-dinero;
+        SiNo
+            Escribir "Fondos insuficientes";
+        FinSi
+    FinSubProceso
+    
+    SubProceso saldo <- mostrariii()
+        Definir saldo Como Caracter;
+        Definir cantidad Como Entero;
+        
+        cantidad<- captura();
+        
+        Escribir "Su saldo acual es ", cantidad, " pesos";
+    FinSubProceso
+    
+    Proceso EjercicioDiez
+        Definir menuOpcion Como Entero;
+        Definir mensaje Como Caracter;
+        Definir saldo Como Caracter;
+        Definir titular Como Caracter;
+        
+        Escribir "             ---------- Bienvenido a Su Banco Fiel -----------";
+        menuOpcion <- capturai();
+        
+        Segun menuOpcion Hacer
+            1: 
+                titular<- mostrar();
+                mensaje <- mostrari();
+                
+            2: 
+                titular<- mostrar();
+                mensaje <- mostrarii();
+                
+            3:
+                saldo <- mostrariii();
+        
+        FinSegun
+        
+    FinProceso                       
+    </pre>
+    <button type="button" onclick="ocultar('seccion10','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+                        
+<footer>
+    <a href="../talleres/taller5.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estudios realizados</title>
+    <link rel="stylesheet" href="../css/estilosHV.css">
+    <script src="../js/javascript.js"></script>
+</head>
+<body id="bodyStyle" onload="main()">
+    
+    <header><h2>Estudios</h2></header>
+
+    <hgroup><h2 class="subtitulo">(2021) </h2></hgroup>
+    <section>
+        
+        <button class="titulo" type="button" onclick="mostrar('seccion1')"><h4></b> Pregrado: Ingeniería Ambiental </b> </h4></button>
+        <article id="seccion1" class="estiloDescripcion"> 
+            <h5 class="descripcion"> <i>Universidad de Antioquia</i></h5>
+            <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+        </article>
+        
+<hr>
+        
+        <button class="titulo" type="button" onclick="mostrar('seccion2')"><h4><b> Diplomado: Habilidades en programación con énfasis 
+            <br> en aplicaciones Web -Misión TIC 2022 </b></h4></button>
+        <article id="seccion2" class="estiloDescripcion">
+            <h5 class="descripcion"> <i>Universidad de Caldas</i> </h5>
+            <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+        </article>
+        
+    </section>
+
+    
+    <hgroup><h2 class="subtitulo">(2019) </h2></hgroup>
+    <section> 
+        <button class="titulo" type="button" onclick="mostrar('seccion3')"><h4><b>Diplomado: Levantamiento de Información y 
+            <br> Georreferenciación </b></h4></button>  
+            <article id="seccion3" class="estiloDescripcion">
+            <h5 class="descripcion"> <i>Corporación Unificada Nacional de Educación Superior</i></h5></p>
+            <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+        </article>
+        
+       <hr>  
+
+        <button class="titulo" type="button" onclick="mostrar('seccion4')"><h4> <b>Curso: Sistema de gestión de la seguridad y 
+            <br> salud en el trabajo SG-SST</b>  </h4></button>
+        <article id="seccion4" class="estiloDescripcion">
+            <h5 class="descripcion"> <i>SENA </i></h5></p>
+            <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button> 
+        </article>    
+        
+    </section>
+
+    <footer>
+        <a href="../HV/HojadeVida.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+    
+        <section style="text-align-last: right;">
+            <h7>Cambiar estilo</h7>
+        <button type="button" onclick="cambiarColor1('body')" style="background-color:darkcyan"> . </button>
+        <button type="button" onclick="cambiarColor2('body')" style="background-color: lightslategray">.</button>
+        <button type="button" onclick="cambiarColor3('body')" style="background-color: rgb(212, 198, 171)">.</button>
+    </section>
+    </footer>
+</body>
+</html>

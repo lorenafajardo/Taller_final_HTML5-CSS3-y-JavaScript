@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 1 de java</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    
+    <header><h3>Taller 1: variables e impresión en Java </h3> </header>
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+        <article id="seccion1" class="estiloDescripcion">
+            <p> <h4 class="descripcion">Realizar un programa el cual solicite su nombre y apellidos.</i> </h4></p>
+        <p><i>Clase EjercicioI, donde se capturan los datos y se declara el metodo</i></p>
+            <pre class="codigo">
+            
+                package entidades;
+
+                import java.util.Scanner;
+                
+                public class EjercicioI {
+                    private String nombre;
+                    private String apellidos;
+                    private Scanner input;
+                    
+                    
+                    
+                    public void CapturaDatos(){
+                        System.out.println("Por favor diligencie la siguiente información: ");
+                        input = new Scanner(System.in);
+                        System.out.println("Nombre: ");
+                        nombre = input.nextLine();
+                        System.out.println("Apellidos: ");
+                        apellidos = input.nextLine();
+                        
+                        System.out.println( " Usted se ha idenificado como: " + nombre + " "+ apellidos);
+                    }
+                    
+                }
+            </pre>
+
+            <p><i>Clase main, donde se ejecuta el metodo</i> </p>
+            <pre class="codigo">
+
+        package main;
+
+            import entidades.EjercicioI;
+
+            public class MainEjercicioI {
+
+                public static void main(String[] args) {
+                    
+                    EjercicioI ejecutar = new EjercicioI();
+                    ejecutar.CapturaDatos();
+                }
+            }
+            </pre>
+            <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>
+        <hr>
+        <section>
+            <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+            <article id="seccion2" class="estiloDescripcion">
+                <p> <h4 class="descripcion">Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</i> </h4></p>
+                <p> <i> Clase EjercicioII, donde se capturan los datos y se declara el metodo</i></p>
+                <pre class="codigo">
+
+     package entidades;
+
+            import java.util.Scanner;
+
+            public class EjercicioII {
+                
+                private String nombre;
+                private String apellidos;
+                private int edad;
+                private int estatura;
+                private Scanner input;
+                
+                public void CapturaDatos(){
+                    System.out.println("Por favor diligencie la siguiente información: ");
+                    input = new Scanner(System.in);
+                    System.out.println("Nombre: ");
+                    nombre = input.nextLine();
+                    System.out.println("Apellidos: ");
+                    apellidos = input.nextLine();
+                    System.out.println("Edad: ");
+                    edad = input.nextInt();
+                    System.out.println("Estatura: ");
+                    estatura = input.nextInt();
+                    
+                    System.out.println( " Usted se ha idenificado como: " + nombre + " "+ apellidos + ", con "+ edad + " años de edad y estatura "+estatura +" metros");
+                
+            }
+            }
+                </pre>
+                <p> <i>Clase main, donde se ejecuta el metodo </i> </p>
+
+                <pre class="codigo">
+        
+        package main;
+
+            import entidades.EjercicioII;
+
+            public class MainEjercicioII {
+
+                public static void main(String[] args) {
+                    EjercicioII ejecutar = new EjercicioII();
+                    ejecutar.CapturaDatos();
+                }
+            }
+                </pre>
+
+
+                <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+            </article>
+        </section>
+            <hr>
+
+            <section>
+                <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+                <article id="seccion3" class="estiloDescripcion">
+                    <p> <h4 class="descripcion">Realizar un programa el cual solicite su nombre y apellidos, 
+                        <br> también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje 
+                        <br> "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h4></p>
+                        <p> <i> Clase EjercicioIII, donde se capturan los datos y se declara el metodo</i></p>
+                
+                    <pre class="codigo">
+
+                    package entidades;
+
+                        import java.util.Scanner;
+                        
+                        public class EjercicioIII {
+                        
+                            private String nombre;
+                            private String apellidos;
+                            private String nombreMama;
+                            private String apellidosMama;
+                            private String nombrePapa;
+                            private String apellidosPapa;
+                            private Scanner input;
+                            
+                            public void CapturaDatos(){
+                            System.out.println("Por favor diligencie la siguiente información: ");
+                            input = new Scanner(System.in);
+                            System.out.println("Nombre: ");
+                            nombre = input.nextLine();
+                            System.out.println("Apellidos: ");
+                            apellidos = input.nextLine();
+                            System.out.println("Nombre de su mamá: ");
+                            nombreMama = input.nextLine();
+                            System.out.println("Apellidos de su mamá: ");
+                            apellidosMama = input.nextLine();
+                            System.out.println("Nombre de su papá: ");
+                            nombrePapa = input.nextLine();
+                            System.out.println("Apellidos de su papá: ");
+                            apellidosPapa = input.nextLine();
+                            
+                            System.out.println("Yo "+ nombre+" "+ apellidos + ", soy hijo de " + nombreMama + " "+ apellidosMama + " y "+ nombrePapa+ " " +apellidosPapa);
+                            
+                            }
+                        }
+                    </pre>
+                    <p> <i>Clase main, donde se ejecuta el metodo </i> </p>
+
+                    <pre class="codigo">
+                    
+                    package main;
+
+                        import entidades.EjercicioIII;
+                        
+                        public class MainEjercicioIII {
+                        
+                            public static void main(String[] args) {
+                                EjercicioIII ejecutar = new EjercicioIII();
+                                ejecutar.CapturaDatos();    
+                            }
+                        }
+                    </pre>
+
+                    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+                </article>
+            </section>
+                <hr>
+
+                <section>
+                    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+                    <article id="seccion4" class="estiloDescripcion">
+                        <p> <h4 class="descripcion">Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el 
+                            <br> siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</h4></p>
+                            <p> <i> Clase EjercicioIV, donde se capturan los datos y se declara el metodo</i></p>
+
+                        <pre class="codigo">
+                            
+                    package entidades;
+
+                        import java.util.Scanner;
+
+                        public class EjercicioIV {
+                            
+                            private String pais;
+                            private String capital;
+                            private Scanner input;
+                            
+                            public void CapturaDatos(){
+                                System.out.println("Por favor diligencie la siguiente información: ");
+                                input = new Scanner(System.in);
+                                System.out.println("Pais: ");
+                                pais = input.nextLine();
+                                System.out.println("Ciudad capital: ");
+                                capital = input.nextLine();
+                                
+                                System.out.println("La ciudad " + capital + " es la capital del país " +pais);
+                            }
+                        }
+                        </pre>
+
+                        <p> <i>Clase main, donde se ejecuta el metodo </i> </p>
+
+                    <pre class="codigo">
+
+                        package main;
+
+                        import entidades.EjercicioIV;
+
+                        public class MainEjercicioIV {
+
+                            public static void main(String[] args) {
+                                EjercicioIV ejecutar = new EjercicioIV();
+                                ejecutar.CapturaDatos();
+                            }
+                        }
+                    </pre>
+                        <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+                    </article>
+                </section>
+                    <hr>
+
+                    <section>
+                        <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+                        <article id="seccion5" class="estiloDescripcion">
+                            <p> <h4 class="descripcion">Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe 
+                                e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</h4></p>
+                                <p> <i> Clase EjercicioIV, donde se capturan los datos y se declara el metodo</i></p>
+                        
+                            <pre class="codigo">
+
+                                package entidades;
+
+                                import java.util.Scanner;
+                                
+                                public class EjercicioV {
+                                
+                                    private String nombreMascota;
+                                    private int edad;
+                                    private String tipoMascota;
+                                    private String propietario;
+                                    private Scanner input;
+                                    
+                                    public void CapturaDatos(){
+                                        System.out.println("Por favor diligencie la siguiente información: ");
+                                        input = new Scanner(System.in);
+                                        System.out.println("Nombre de la mascota: ");
+                                        nombreMascota = input.nextLine();
+                                        System.out.println("tipo de mascota: ");
+                                        tipoMascota = input.nextLine();
+                                        System.out.println("Nombre del propietario: ");
+                                        propietario = input.nextLine();
+                                        System.out.println("Edad de la mascota: ");
+                                        edad = input.nextInt();
+                                        System.out.println( nombreMascota + " es un(a) " + tipoMascota + " el cual, tiene " + edad + " años de edad, y " + propietario + " es actualmente su dueño(a)");
+                                    }
+                                }
+
+                            </pre>
+
+                            <p> <i>Clase main, donde se ejecuta el metodo </i> </p>
+
+                            <pre class="codigo">
+
+                                package main;
+
+                                import entidades.EjercicioV;
+
+                                public class MainEjercicioV {
+
+                                    public static void main(String[] args) {
+                                        EjercicioV ejecutar = new EjercicioV();
+                                        ejecutar.CapturaDatos();
+                                    }
+                                }
+                            </pre>
+
+                            <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+                        </article>
+                    </section>
+                        <hr>
+
+                        <section>
+                            <button  class="titulo" type="button" onclick="mostrar('seccion11')"><h3> <b> GitHub </b> </h3></button>
+                            <article id="seccion11" class="estiloDescripcion">
+                            <p> <h4 class="descripcion">El desarollo de los anteriores ejercicios se ecuentra en el repositorio de GitHub: talleresSofka-I-II-III-IV, en la rama: Talleres, carpeta: Taller1</h4></p>
+                            <a href="https://github.com/lorenafajardo/talleresSofka-I-II-III-IV.git">Acceso a repositorio GitHub</a>
+                            <br><br><button type="button" onclick="ocultar('seccion11','descripcionOculta')">Cerrar</button>
+                            </article>
+                        </section>
+
+<footer>
+    <a href="../portafolio.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller2</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    <header> <h3> Taller 2: Taller de condicionales </h3></header>
+<p>Ejercicios escritos en PSeInt con el perfil Estricto.</p>
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+    <article id="seccion1" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</i> </h4></p>
+    <pre class="codigo">
+        
+        Proceso EjercicioUno
+
+            Definir edad Como Entero;
+            
+            Escribir " ¿Cual es su edad (años) ";
+            Leer edad;
+            
+            si edad >= 18 Entonces
+                Escribir "Usted es mayor de Edad";
+            SiNo
+                Escribir "Usted es menor de Edad";
+            FinSi
+
+        FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+    <article id="seccion2" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</i> </h4></p>
+            
+    <pre class="codigo">
+        
+        Proceso EjercicioDos
+	
+        Definir edad Como Entero;
+        
+        Escribir " ¿Cual es su edad (años) ";
+        Leer edad;
+        
+        si edad <= 18 Entonces
+            Escribir "Usted aun es un niño(a)";
+        SiNo
+            Escribir "Usted ya no pertenece a la categoria niño ";
+        FinSi
+        
+    FinProceso           
+    </pre>
+    <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+    <article id="seccion3" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h4></p>
+                
+    <pre class="codigo">
+        
+        Proceso EjercicioTres
+	
+        Definir nombre Como caracter;
+        Definir apellidos Como caracter;
+        Definir edad Como Entero;
+        
+        Escribir "Por favor, diligencie la siguiente información: ";
+        
+        Escribir "  Nombre: ";
+        Leer nombre;
+        Escribir "  Apellidos: ";
+        Leer apellidos;
+        Escribir "  Edad (años): ";
+        Leer edad;
+        
+        si edad >= 18 Entonces
+            Escribir   nombre, " ", apellidos, ", usted es mayor de edad, por lo tano, puede entrar a la fiesta";
+        SiNo
+            Escribir   nombre, " ", apellidos, ", usted es menor de edad, por lo tano, no puede entrar a la 
+            fiesta, por favor devuelvase a su casa";
+        FinSi
+        
+    FinProceso                    
+    </pre>
+    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+    <article id="seccion4" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h4></p>
+    <pre class="codigo">
+        
+        Proceso EjercicioCuatro
+
+        Definir opcion Como entero;
+        Definir opcionPelicula Como entero;
+        Definir opcionRecepcion Como entero;
+        
+        Escribir "---------------------------------------";
+        Escribir "Bienvenido al proceso de alquiler de peliculas, a continuación se muestran las peliculas 
+        disponibles para alquilar ";
+        Escribir "  1. Spider-Man";
+        Escribir "  2. La liga de la justicia";
+        Escribir "  3. Culpable";
+        Escribir "  4. Disomnia";
+        
+        Escribir " Desea alquilar alguna de las peliculas disponibles:  ";
+        Escribir " 1. SI";
+        Escribir " 2. NO";
+        Leer opcion;
+        
+        Segun  opcion hacer
+            1:
+                Escribir "Seleccione el número de la pelicula que desea alquilar";
+                Escribir "  1. Spider-Man";
+                Escribir "  2. La liga de la justicia";
+                Escribir "  3. Culpable";
+                Escribir "  4. Disomnia";
+                
+                Leer opcionPelicula;
+                
+                Escribir " Desea recibir la pelicula en su casa o en la Video Tienda?";
+                Escribir " 1. En la casa";
+                Escribir " 2. En la Video Tienda";
+                
+                Leer opcionRecepcion;
+                
+                si opcionRecepcion == 1 Entonces
+                    Escribir " Usted escogió recibir la pelicula en casa";
+                    Escribir "Pronto llegará a la puerta de su casa.";
+                FinSi
+                
+                si opcionRecepcion == 2 Entonces
+                    Escribir " Usted escogió recibir la pelicula en la Video Tienda, por ello tiene la opción 
+                    de realizar anotaciones de ser necesario ";
+                    Escribir "Gracias";
+                FinSi
+                
+            2:
+                Escribir "Ha sido un gusto atenderte. Vuelve pronto";
+                
+        FinSegun
+        
+    FinProceso                    
+                        
+    </pre>
+    <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+    <article id="seccion5" class="estiloDescripcion">
+    <p> <h4 class="descripcion">La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</h4></p>
+    <pre class="codigo">
+    
+        Proceso EjercicioCinco
+
+        Definir opcion Como Entero;
+        Definir opcionProducto Como Entero;
+        Definir opcionComprar Como Entero;
+            
+        Definir documento Como caracter;
+        Definir producto Como Caracter;
+        Definir fecha Como Caracter;
+            
+        Escribir "----------------- Bienvenido a Drogueria Mi Salud --------------------";
+
+        Escribir " Proceso de facturación ";
+        
+        Escribir "Escoja la opción que desea realizar";
+        Escribir " 1. Comprar producto";
+        Escribir " 2. Consultar precios";
+        Escribir " 3. Devoluciones";
+        
+        Leer opcion;
+        
+        Segun opcion Hacer
+            1:
+                Escribir " A continuacion se presentan los productos disponibles, seleccione el número corespodiente
+                 para conocer las carcteriticas del producto";
+                Escribir " 1. Alcohol";
+                Escribir " 2. Gel antibacterial";
+                Escribir " 3. Antigripal";
+                
+                leer opcionProducto; 
+                
+                Segun opcionProducto Hacer
+                    1: 
+                        Escribir "Caracteristicas: Frasco Con 700 ml    -    Vía de administración: Topico - Externo";
+                        Escribir "Desea comprar este producto?";
+                        Escribir "1. Sí";
+                        Escribir "2. No";
+                        leer opcionComprar;
+                        
+                        Segun  opcionComprar hacer
+                            1:
+                                Escribir "Compra exitosa";
+                            2: 
+                                Escribir "Vuelva pronto";
+                        FinSegun
+                        
+                    2:
+                        Escribir "Caracteristicas: Frasco Con 1000 mL  -   Antiséptico y desinfectante de uso externo.";
+                        Escribir "Desea comprar este producto?";
+                        Escribir "1. Sí";
+                        Escribir "2. No";
+                        leer opcionComprar;
+                        
+                        Segun  opcionComprar hacer
+                            1:
+                                Escribir "Compra exitosa";
+                            2: 
+                                Escribir "Vuelva pronto";
+                        FinSegun
+                        
+                    3:
+                        Escribir "Comprimidos para aliviar los síntomas de la gripe que combina paracetamol, cafeína,
+                         butetamato y frenilefrina.";
+                        Escribir "Desea comprar este producto?";
+                        Escribir "1. Sí";
+                        Escribir "2. No";
+                        leer opcionComprar;
+                        
+                        Segun  opcionComprar hacer
+                            1:
+                                Escribir "Compra exitosa";
+                            2: 
+                                Escribir "Vuelva pronto";
+                        FinSegun
+                FinSegun
+                
+            2: 
+                Escribir " Precios de productos disponibles";
+                Escribir " 1. Alcohol  -   $3.600";
+                Escribir " 2. Gel antibacterial -  $8.000"; 
+                Escribir " 3. Antigripal  -  $11.000";
+                
+            3:
+                Escribir "Proceso de Devolución";
+                Escribir "Por favor, diligencie la siguiente infomacion para realizar la devolución del producto ";
+                Escribir "Número de documento: ";
+                Leer documento;
+                Escribir "Tipo de Producto: ";
+                Leer producto;
+                Escribir "Fecha de compra: ";
+                Leer fecha;
+                
+                Escribir " La solicitud para la devolución del producto ", producto, " asociado al comprador con 
+                número de identificación ", documento, " fue aceptada";
+                
+        FinSegun
+        
+    FinProceso             
+                    
+    </pre>
+    <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+     <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion6')"><h3> <b>Ejercicio 6 </b> </h3></button>
+    <article id="seccion6" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</h4></p>
+                            
+    <pre class="codigo">
+        
+        Proceso EjecicioSeis
+	
+        Definir opcionRegistrar Como entero;
+        Definir placa Como Caracter;
+        Definir fechaIngreso Como Caracter;
+        Definir fechaSalida Como Caracter;
+        Definir observaciones Como Caracter;
+        Definir arreglos Como Caracter;
+        Definir novedades Como Caracter;
+        
+        Escribir "---------------------- Bienvenido a El Maquinista --------------------";
+        
+        Escribir " Por favor, ingrese la opción a registrar";
+        Escribir " 1. Ingreso de motocicleta";
+        Escribir " 2. Salida de motocicleta";
+        
+        Leer opcionRegistrar;
+        
+        Escribir "---------------------------------------------------------------------";
+        Segun opcionRegistrar Hacer
+            1:
+                Escribir "Placa de la motocicleta: ";
+                Leer placa;
+                Escribir "Dia de ingreso: ";
+                leer fechaIngreso;
+                Escribir "Observaciones realizadas: ";
+                leer observaciones;
+                Escribir "---------------------------------------------------------------------";
+                Escribir " Registro Exitoso";
+                
+            2: 
+                Escribir "Placa de la motocicleta: ";
+                Leer placa;
+                Escribir "Dia de salida: ";
+                leer fechaSalida;
+                Escribir "Arreglos realizadas: ";
+                leer arreglos;
+                Escribir "Novedades: ";
+                Leer novedades;
+                Escribir "---------------------------------------------------------------------";
+                Escribir " Registro Exitoso";
+                
+        FinSegun
+        
+        Escribir "---------------------------------------------------------------------";
+        
+    FinProceso                                
+    </pre>
+    <button type="button" onclick="ocultar('seccion6','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion7')"><h3> <b>Ejercicio 7 </b> </h3></button>
+    <article id="seccion7" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</h4></p>
+                    
+    <pre class="codigo">
+        
+        Proceso EjercicioSiete
+
+        Definir peso Como Real;
+        Definir estatura Como Real;
+        Definir imc Como Real;
+        
+        Escribir "        ------------------ Secretaría de Salud Municipal -------------------";
+        
+        Escribir " Por favor, ingrese la siguiente información para calcular su IMC (Índice de masa corporal)  ";
+        Escribir "   Peso (Kg): ";
+        Leer peso;
+        Escribir "   Estatura (m)";
+        Leer estatura;
+        
+        Escribir "         --------------------------------------------------------------------";
+        
+        imc <- peso/(estatura^2) ;
+        
+        si imc <= 18.5 Entonces
+            Escribir "El valor correspondiennte a su IMC es ", imc, " y se ecuentra en el 
+            rango de bajo peso";
+            Escribir "        ------------------------------------------------------------------";
+        FinSi
+        
+        si 18.5 < imc & imc <= 24.9 Entonces
+            Escribir "El valor correspondiennte a su IMC es ", imc, " y se ecuentra en el
+             rango de peso normal";
+            Escribir "         ------------------------------------------------------------------";
+        FinSi
+        
+        si 25 <= imc & imc <= 29.9 Entonces
+            Escribir "El valor correspondiennte a su IMC es ", imc, " y se ecuentra en el 
+            rango de sobrepeso";
+            Escribir "         ------------------------------------------------------------------";
+        FinSi
+        
+        si 30 <= imc Entonces
+            Escribir "El valor correspondiente a su IMC es ", imc, " y se ecuentra en el
+             rango de obeso";
+            Escribir "        -------------------------------------------------------------------";
+        FinSi
+        
+    FinProceso                                          
+    </pre>
+    <button type="button" onclick="ocultar('seccion7','descripcionOculta')">Cerrar</button>
+    </article> 
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion8')"><h3> <b>Ejercicio 8 </b> </h3></button>
+    <article id="seccion8" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</h4></p>
+                                    
+    <pre class="codigo">
+        
+        Proceso EjercicioOcho
+	
+        Definir opcion Como Entero;
+        Definir opcionPedido Como Entero;
+        Definir valorTotal Como Entero;
+        
+        Definir sabor Como Caracter;
+        Definir cantidad Como Caracter;
+        Definir decoracion Como Caracter;
+        
+        Escribir "                ----------- Bienvenido ------------";
+        Escribir "Por favor, seleccione la opción a realizar";
+        Escribir " 1. Registrar pedido ";
+        Escribir " 2. Tortas disponibles ";
+        Escribir " 3. Registro de ventas diarias ";
+        
+        leer opcion;
+        
+        Segun opcion Hacer
+            1: 
+                escribir "¿Desea realizar un pedido?";
+                Escribir " 1. si";
+                Escribir " 2. no";
+                
+                Leer opcionPedido;
+                    
+                    Escribir "Elija las caracteisticas del pedido";
+                    Escribir "  - Sabor:  ";
+                    Leer sabor;
+                    Escribir "  - Cantidad (Porciones): ";
+                    Leer cantidad;
+                    Escribir "  - Decoración: ";
+                    Leer decoracion;
+                    Escribir "Valor a pagar";
+                    Leer valorTotal;
+                
+                Escribir "Pedido registrado";
+                
+            2: 
+                Escribir "Tortas disponibles";
+                Escribir " 1. Torta de chocolate";
+                Escribir " 2. Torta de vainilla";
+                Escribir " 3. Torta de naranja";
+                Escribir " 4. Torta de arequipe";
+                
+            3: 
+                Escribir " Ventas diarias ";
+                Escribir  "Las ventas diarias seran calculadas mediante el registro de pedidos ";
+    
+            FinSegun
+
+        FinProceso                 
+    </pre>
+    <button type="button" onclick="ocultar('seccion8','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion9')"><h3> <b>Ejercicio 9 </b> </h3></button>
+    <article id="seccion9" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h4></p>
+    <pre class="codigo">
+        
+        Proceso EjercicioNueve
+
+            Definir opcion Como Entero;
+            
+            Definir area Como Real;
+            Definir largo Como Real;
+            Definir ancho Como Real;
+            Definir base Como Real;
+            Definir altura Como Real;
+            Definir baseMayor Como Real;
+            Definir baseMenor Como Real;
+            
+            Escribir "    --------- Calculadora de Areas -------------";
+            Escribir " Por favor, seleccione la figura geometrica a calcular el area";
+            Escribir " 1. Rectangulo";
+            Escribir " 2. Triangulo";
+            Escribir " 3. Trapecio";
+            
+            Leer opcion;
+
+            Segun opcion Hacer
+                1: 
+                    Escribir " Escriba las medidas de las dimesiones correspondientes";
+                    Escribir " Largo (cm) ";
+                    Leer largo;
+                    Escribir " Ancho (cm)";
+                    Leer ancho;
+                    
+                    area <- largo * ancho;
+                    
+                    Escribir "El area del rectangulo es ", area, "cm";  
+                    
+                2:
+                    Escribir " Escriba las medidas de las dimesiones correspondientes";
+                    Escribir " Base (cm) ";
+                    Leer base;
+                    Escribir " Altura (cm)";
+                    Leer altura;
+                    
+                    area <- (base * altura)/2;
+                    
+                    Escribir "El area del triangulo es ", area, "cm";
+                    
+                3:
+                    Escribir " Escriba las medidas de las dimesiones correspondientes";
+                    Escribir " Base mayor (cm) ";
+                    Leer baseMayor;
+                    Escribir " Base Menor (cm)";
+                    Leer baseMenor;
+                    Escribir " Altura (cm)";
+                    Leer altura;
+                    
+                    area <- ((baseMayor + baseMenor)* altura)/2;
+                    
+                    Escribir "El area del trapecio es ", area, "cm";
+                    
+            FinSegun
+            
+        FinProceso                    
+                       
+    </pre>
+    <button type="button" onclick="ocultar('seccion9','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+    
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion10')"><h3> <b>Ejercicio 10 </b> </h3></button>
+    <article id="seccion10" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</h4></p>
+                        
+    <pre class="codigo">
+        
+        Proceso EjercicioDiez
+	
+        Definir opcion Como Entero;
+        Definir usuario Como Caracter;
+        Definir cantidad Como Real;
+        Definir titular Como Caracter;
+        Definir dineroIngreso Como Real;;
+        Definir dineroRetiro Como Real;
+        
+        Escribir "             ---------- Bienvenido a Su Banco Fiel -----------";
+        
+        Escribir "Por favor, selecione la opcion a realizar";
+        Escribir " 1. Ingreso de dinero";
+        Escribir " 2. Retiro de dinero";
+        Escribir " 3. Consulta de saldo";
+        
+        Leer opcion;
+        
+        cantidad <- 5000;
+        
+        Segun opcion Hacer
+            1: 
+                Escribir "Diligencie la información";
+                Escribir "Nombre del titular:";
+                Leer titular;
+                Escribir "Cantidad de dinero a ingresar:  ";
+                Leer dineroIngreso;
+                
+                si dineroIngreso > 0 Entonces
+                    Escribir " Dinero ingresado correctamente";
+                SiNo
+                    Escribir "Valor invalido ";
+                FinSi
+                
+            2: 
+                Escribir "Diligencie la información";
+                Escribir "Nombre del titular:";
+                Leer titular;
+                Escribir "Cantidad de dinero a retirarar:  ";
+                Leer dineroRetiro;
+                
+                si dineroRetiro <= cantidad Entonces
+                    Escribir "Retiro exitoso";
+                SiNo
+                    Escribir "Fondos insuficientes";
+                FinSi
+                
+            3:
+                Escribir "Su saldo acual es ", cantidad, " pesos";
+        
+        FinSegun
+        
+    FinProceso                          
+    </pre>
+    <button type="button" onclick="ocultar('seccion10','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion11')"><h3> <b> Video </b> </h3></button>
+        <article id="seccion11" class="estiloDescripcion">
+        <p> <h4 class="descripcion">Explicación de los ejercicios</h4></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/93pH3nEtYMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br>
+        <button type="button" onclick="ocultar('seccion11','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>
+                        
+<footer>
+    <a href="../portafolio.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+</body>
+</html>

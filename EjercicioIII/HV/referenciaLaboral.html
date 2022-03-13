@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencias laborales</title>
+    <link rel="stylesheet" href="../css/estilosHV.css">
+    <script src="../js/javascript.js"></script>
+</head>
+<body id="bodyStyle" onload="main()">
+    <header><h2>Referencias Laborales</h2></header>
+
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Alexander Luna Carlosama </b> </h3></button>
+        <article id="seccion1" class="estiloDescripcion">
+            <p> <h4 class="descripcion">Secretario de Medio Ambiente y Desarrollo Agopecuario <br>
+                <i>Alcaldía Municipal de Sibundoy</i> </h4></p>
+        
+            <p><h5 class="descripcion">Carrera 15# 12-42 <br> Sibundoy, Putumayo <br> +57 320 467 66 23 <br> alexlunac@gmail.com</h5></p>
+            <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>
+        <hr>
+   
+    <section >
+        <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b> Ana Maria Teran Cuellar </b> </h3></button>
+    <article id="seccion2" class="estiloDescripcion">
+        <p> <h4 class="descripcion">Directora Territorial Hevéxicos <br> <i>CORANTIOQUIA</i> </h4></p>
+        <p><h5 class="descripcion">Carrera 8 # 10-97 <br>Santa Fe de Antioquia, Antioquia <br> +57 311 678 45 36 <br> anamariateran_66@gmail.com</h5></p>
+        <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+    </article>    
+</section>
+     
+<hr>
+
+<section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b> Lina Claudia Giraldo Buitrago <b> </h3></button> 
+    <article id="seccion3" class="estiloDescripcion">
+        <p> <h4 class="descripcion">Coordinadora de Investigación <br><i>Universidad de Antioquia</i> </h4></p>        
+        <p><h5 class="descripcion">Carrera 37# 10-08  <br> Medellín, Antioquia <br> +57 321 764 78 99 <br> linaclaudiagiraldo@udea.edu.com</h5></p>
+        <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+
+    <footer>
+      <a href="./HojadeVida.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+    
+      <section style="text-align-last: right ">
+        <h7>Cambiar estilo</h7>
+        <button type="button" onclick="cambiarColor1('body')" style="background-color:darkcyan"> . </button>
+        <button type="button" onclick="cambiarColor2('body')" style="background-color: lightslategray">.</button>
+        <button type="button" onclick="cambiarColor3('body')" style="background-color: rgb(212, 198, 171)">.</button>
+    </section>
+    
+    </footer>
+
+    
+</body>
+</html>

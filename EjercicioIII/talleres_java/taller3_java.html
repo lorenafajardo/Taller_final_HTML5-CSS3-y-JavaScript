@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 3: Ciclos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    <header><h3> Taller 3: Ciclos en Java </h3></header>
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+    <article id="seccion1" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar la siguiente figura por medio del ciclo Para</i> </h4></p>
+    <img src="../imagenes/taller3_img1.PNG" height="150px">
+    <pre class="codigo">
+
+        package Main;
+
+        public class MainEjercicioI {
+        
+            public static void main(String[] args) {
+                
+                for (int i = 1; i <= 10; i++) {
+                    for (int a = 1; a <= i; a++) {
+                        System.out.print("*");
+                    }
+                    System.out.println(
+                            );
+                }   
+            }
+        }
+    </pre>    
+    <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+    <article id="seccion2" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar la siguiente figura por medio del ciclo Mientras - Hacer</i> </h4></p>
+    <img src="../imagenes/taller3_img2.PNG" height="150px">
+    <pre class="codigo">
+
+        package Main;
+
+        public class MainEjercicioII {
+        
+            public static void main(String[] args) {
+                
+                int variablei=0;
+                
+                while (variablei<=10) {
+                    
+                    int espacios=0;
+                    int asteriscos =0;
+                    
+                    while (espacios <= 9-variablei){
+                        System.out.print(" ");
+                        espacios = espacios+1;
+                    }
+                    
+                    while(asteriscos <= variablei){
+                        System.out.print("*");
+                        asteriscos = asteriscos +1;
+                    }
+                    System.out.println();
+                    variablei = variablei +1;
+                }   
+            }
+        }
+
+    </pre>    
+    <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+    <article id="seccion3" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</i> </h4></p>
+    <img src="../imagenes/taller3_img3.PNG" height="150px">
+    <pre class="codigo">
+        
+        package Main;
+
+        import java.util.Iterator;
+        
+        public class MainEjercicioIII {
+        
+            public static void main(String[] args) {
+                
+        int variablei=1;
+                
+                while (variablei<=11) {
+                    
+                    int espacios=1;
+                    int asteriscos =1;
+                    
+                    while (espacios <= 13-variablei){
+                        System.out.print(" ");
+                        espacios = espacios+1;
+                    }
+                    
+                    while(asteriscos < variablei+ variablei){
+                        System.out.print("*");
+                        asteriscos = asteriscos +1;
+                    }
+                    System.out.println();
+                    variablei = variablei +1;
+                }
+                
+                for (int i = 1; i < 3; i++) {
+                    for (int j = 1; j < 12; j++) {
+                        System.out.print(" ");
+                    }
+                    
+                    for (int j = 1; j <=3; j++) {
+                        System.out.print("*");
+                    }
+                    System.out.println();
+                }
+        
+            for (int i = 1; i < 3; i++) {
+                for (int j = 1; j < 12-i; j++) {
+                    System.out.print(" ");			
+                }
+                
+                for (int j = 1; j < 4+(2*i); j++) {
+                    System.out.print("*");		
+                }
+                System.out.println();
+            }	
+        }
+        
+        }
+
+    </pre>    
+    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+    <article id="seccion4" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</i> </h4></p>
+    <img src="../imagenes/taller3_img4.PNG" height="150px">
+    <pre class="codigo">
+     
+        package Main;
+
+        import java.util.Scanner;
+        
+        public class MainEjercicioIV {
+        
+            public static void main(String[] args) {
+            
+                Scanner input = new Scanner(System.in);
+                
+                System.out.println("          Tabla de Multiplicar ");
+                System.out.println();
+                System.out.println("Por favor, esciba el numero de la tabla que quiere ver");
+        
+                int nro = input.nextInt(); 
+                
+                for (int i = 0; i <= 10; i++) {
+                    int producto = nro*i;
+                    System.out.println(nro + " x " + i+ " = " + producto);
+                    
+                }
+            }
+        
+        }
+	
+    </pre>    
+    <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+    <article id="seccion5" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</i> </h4></p>
+    <img src="../imagenes/taller3_img5.PNG" height="100px">
+    <pre class="codigo">
+       
+        package Main;
+
+        import java.util.Scanner;
+        
+        public class MainEjercicioV {
+        
+            public static void main(String[] args) {
+                
+                Scanner input = new Scanner(System.in); 
+                
+                int opcion = 0;
+                
+                do{
+                    System.out.println();
+                    System.out.println("                  Menu de usuario"   );
+                    System.out.println();
+                    System.out.println("1. Captura nombre");
+                    System.out.println("2. Saludar persona");
+                    System.out.println("3. Salir del sistema ");
+                    System.out.println();
+                    
+                    opcion = input.nextInt();input.nextLine();
+                    
+                    if (opcion==1){
+                        System.out.println(" Por favor, escriba su nombre: ");
+                    }
+                    String nombre = input.nextLine();
+                    
+                    if (opcion==2){
+                        System.out.println("Cordial saludo " + nombre+ ", bienvenido al sistema");
+                    }
+                    
+                }while(opcion!=3);
+                
+                if (opcion == 3){
+                System.out.println("       Vuelva pronto");
+                }
+            }
+        
+        }
+	
+    </pre>    
+    <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion6')"><h3> <b>Ejercicio 6 </b> </h3></button>
+    <article id="seccion6" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</i> </h4></p>
+    <p><i>Clase EjercicioVI, donde se capturan los datos y se declara el metodo</i></p>
+
+    <pre class="codigo">
+         
+        package Entidades;
+
+        public class EjercicioVI {
+            
+            private String nombre;
+            private String telefono;
+            private String organizacion;
+            
+            public String getNombre() {
+                return nombre;
+            }
+            public void setNombre(String nombre) {
+                this.nombre = nombre;
+            }
+            public String getTelefono() {
+                return telefono;
+            }
+            public void setTelefono(String telefono) {
+                this.telefono = telefono;
+            }
+            public String getOrganizacion() {
+                return organizacion;
+            }
+            public void setOrganizacion(String organizacion) {
+                this.organizacion = organizacion;
+            }
+            public EjercicioVI(String nombre, String telefono, String organizacion) {
+                super();
+                this.nombre = nombre;
+                this.telefono = telefono;
+                this.organizacion = organizacion;
+            }
+        
+        }
+
+    </pre> 
+    <p> <i> Clase main, donde se ejecuta el metodo </i></p>
+    <pre class="codigo">
+
+        package Main;
+
+        import java.util.Scanner;
+        
+        import Entidades.EjercicioVI;
+        
+        public class MainEjercicioVI {
+        
+            public static void main(String[] args) {
+        
+                
+                Scanner input= new Scanner(System.in); 
+                int opcion = 0;
+                EjercicioVI datos[];
+                
+                datos = new EjercicioVI[3];
+                
+                do{
+                    System.out.println();
+                    System.out.println("                     Bienvenido   ");
+                    System.out.println("  Por favor, seleccione una opción: ");
+                    System.out.println(" 1. Almacenar contacto");
+                    System.out.println(" 2. Buscar contacto");
+                    System.out.println(" 3. Eliminar contacto");
+                    System.out.println(" 4. Salir");
+                    
+                    opcion = input.nextInt();input.nextLine();
+                    
+                    
+                    if (opcion==1){
+                        
+                        for (int i = 0; i <=2; i++) {	
+                            
+                            System.out.println("     Almacenar contacto  ");
+                            System.out.println("Nombre: ");
+                            String nombre = input.nextLine();
+                            System.out.println("telefono: ");
+                            String telefono =input.nextLine();
+                            System.out.println("organizacion: ");
+                            String organizacion = input.nextLine();
+                            
+                            
+                            EjercicioVI	p = new EjercicioVI(nombre, telefono, organizacion);
+                            datos[i]=p;
+                        }
+                    }
+                    
+                    if (opcion == 2){
+                        System.out.println("        Buscar Contacto    ");
+                        System.out.println(" Escriba el nombre del contacto a buscar: ");
+                        String nombreBuscar = input.nextLine();
+                        
+                        for(int i = 0; i <= datos.length-1; i++){
+                            if(datos[i].getNombre() == nombreBuscar)
+                                System.out.println(datos[i].getNombre());
+                                System.out.println(datos[i].getTelefono());
+                                System.out.println(datos[i].getOrganizacion());
+                                break;
+                        }                   
+                    }
+                    if (opcion == 3){
+                        System.out.println("        Eliminar Contacto    ");
+                        System.out.println(" Escriba el nombre del contacto a eliminar: ");
+                        String nombreEliminar = input.nextLine();
+                    
+                        for(int i = 0; i <= datos.length; i++){
+                            if(datos[i].getNombre() == nombreEliminar)
+                                System.out.println("Informacion del contacto a eliminar");
+                                System.out.println(datos[i].getNombre());
+                                System.out.println(datos[i].getTelefono());
+                                System.out.println(datos[i].getOrganizacion());         
+                       
+                                datos[i].setNombre("");
+                                datos[i].setTelefono("");
+                                datos[i].setOrganizacion("");
+                                
+                                System.out.println(" Contacto eliminado");
+                                break;
+                        }
+                    }
+                }while(opcion!=4);
+                
+                if (opcion==4){
+                    System.out.println(" Hasta Luego");
+                }  
+            }
+        }
+        
+
+    </pre>   
+    <button type="button" onclick="ocultar('seccion6','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion7')"><h3> <b>Ejercicio 7 </b> </h3></button>
+    <article id="seccion7" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos</i> </h4></p>
+    <p><i>Clase EjercicioVII, donde se capturan los datos y se declara el metodo</i></p>
+
+    <pre class="codigo">
+
+        package Entidades;
+
+        public class EjercicioVII {
+        
+            private String placa;
+            private String marca;
+            private String nombre;
+            private String telefono;
+            
+            public EjercicioVII(String placa, String marca, String nombre, String telefono) {
+                super();
+                this.placa = placa;
+                this.marca = marca;
+                this.nombre = nombre;
+                this.telefono = telefono;
+            }
+            
+            public String getPlaca() {
+                return placa;
+            }
+            public void setPlaca(String placa) {
+                this.placa = placa;
+            }
+            public String getMarca() {
+                return marca;
+            }
+            public void setMarca(String marca) {
+                this.marca = marca;
+            }
+            public String getNombre() {
+                return nombre;
+            }
+            public void setNombre(String nombre) {
+                this.nombre = nombre;
+            }
+            public String getTelefono() {
+                return telefono;
+            }
+            public void setTelefono(String telefono) {
+                this.telefono = telefono;
+            }   
+        }
+
+    </pre>   
+    
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+    <pre class="codigo">
+        
+        package Main;
+
+        import java.util.Scanner;
+        
+        import Entidades.EjercicioVII;
+        
+        public class MainEjercicioVII {
+        
+            public static void main(String[] args) {
+                Scanner input= new Scanner(System.in); 
+                int opcion = 0;
+                EjercicioVII vehiculos[];
+                
+                vehiculos = new EjercicioVII[5];
+                
+                do{
+                    System.out.println();
+                    System.out.println("                     Bienvenido al parqueadero El Guardian   ");
+                    System.out.println("  Por favor, seleccione una opción: ");
+                    System.out.println(" 1. Ingresar vehiculo");
+                    System.out.println(" 2. Retirar vehiculo");
+                    System.out.println(" 3. Consultar vehiculo");
+                    System.out.println(" 4. Salir");
+                    
+                    opcion = input.nextInt();input.nextLine();
+                    
+                    
+                    if (opcion==1){
+                        
+                        for (int i = 0; i <=4; i++) {	
+                            
+                            System.out.println("     Ingresar Vehiculo ");
+                            System.out.println("Placa: ");
+                            String placa = input.nextLine();
+                            System.out.println("Marca: ");
+                            String marca =input.nextLine();
+                            System.out.println("Nombre del propietario: ");
+                            String nombre = input.nextLine();
+                            System.out.println("Telefono: ");
+                            String telefono = input.nextLine();
+                            
+                            
+                            EjercicioVII v = new EjercicioVII(placa, marca, nombre, telefono);
+                            vehiculos[i]=v;
+                        }
+                    }
+                    
+                    
+                    if (opcion == 2){
+                        System.out.println("        Retirar vehiculo    ");
+                        System.out.println(" Escriba la placa del vehiculo a retirar: ");
+                        String placaRetirar = input.nextLine();
+                    
+                        for(int i = 0; i <= vehiculos.length; i++){
+                            if(vehiculos[i].getPlaca().equals(placaRetirar)){
+                                System.out.println("Informacion del vehiculo a retirar");
+                                System.out.println(" Placa: "+vehiculos[i].getPlaca());
+                                System.out.println(" Marca: "+vehiculos[i].getMarca());   
+                                System.out.println(" Nombre: "+vehiculos[i].getNombre());
+                                System.out.println(" Telefono: "+vehiculos[i].getTelefono());
+                                      
+                                vehiculos[i].setPlaca("");
+                                vehiculos[i].setMarca("");
+                                vehiculos[i].setNombre("");
+                                vehiculos[i].setTelefono("");
+                                
+                                System.out.println(" El vehiculo fue retirado del parqueadero");
+                                break;
+                        }
+                        }
+                    }
+            
+                    if (opcion == 3){
+                        System.out.println("        Buscar vehiculo    ");
+                        System.out.println(" Escriba la placa del vehiculo ");
+                        String placaBuscar = input.nextLine();
+                        
+                        for(int i = 0; i <= vehiculos.length; i++){
+                            
+                            if(vehiculos[i].getPlaca().equals(placaBuscar)){
+                                    System.out.println("El vehiculo se encuetra en el parqueadero, sus datos a continuacion");
+                                    System.out.println(" Placa:  "+vehiculos[i].getPlaca()); 	
+                                    System.out.println(" Marca:  "+vehiculos[i].getMarca());
+                                    System.out.println(" Nombre del propietario:  "+vehiculos[i].getNombre());
+                                    System.out.println(" Telefono de cotacto:  "+vehiculos[i].getTelefono());
+                                    break;
+                            }
+                         
+                        }
+                                        
+                    }
+                }while(opcion!=4);
+                
+                if (opcion==4){
+                    System.out.println(" Hasta Luego");
+                }
+            }
+        }
+
+    </pre>
+    
+    <button type="button" onclick="ocultar('seccion7','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+
+   <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion8')"><h3> <b>Ejercicio 8 </b> </h3></button>
+    <article id="seccion8" class="estiloDescripcion">
+    <p> <h4 class="descripcion">La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</i> </h4></p>
+
+    <p><i>Clase EjercicioVIII, donde se capturan los datos y se declara el metodo</i></p>
+
+    <pre class="codigo">
+        
+        package Entidades;
+
+        public class EjercicioVII {
+            
+            private String nombre;
+            private String telefono;
+            private String resultadoPrueba;
+            
+            public String getNombre() {
+                return nombre;
+            }
+            public EjercicioVII(String nombre, String telefono, String resultadoPrueba) {
+                super();
+                this.nombre = nombre;
+                this.telefono = telefono;
+                this.resultadoPrueba = resultadoPrueba;
+            }
+            public void setNombre(String nombre) {
+                this.nombre = nombre;
+            }
+            public String getTelefono() {
+                return telefono;
+            }
+            public void setTelefono(String telefono) {
+                this.telefono = telefono;
+            }
+            public String getResultadoPrueba() {
+                return resultadoPrueba;
+            }
+            public void setResultadoPrueba(String resultadoPrueba) {
+                this.resultadoPrueba = resultadoPrueba;
+            }
+        }                        
+                       
+    </pre>    
+    <p><i>Clase main, donde se ejecuta el metodo</i></p>
+    <pre class="codigo">
+
+        package Main;
+
+        import java.util.Scanner;
+        
+        import Entidades.EjercicioVII;
+        
+        public class MainEjercicioVII {
+        
+            public static void main(String[] args) {
+                
+                Scanner input= new Scanner(System.in); 
+                int opcion = 0;
+                EjercicioVII datos[];
+                
+                datos = new EjercicioVII[8];
+                
+                do{
+                    System.out.println();
+                    System.out.println("                     Bienvenido   ");
+                    System.out.println("  Por favor, seleccione una opción: ");
+                    System.out.println(" 1. Registrar  usuario");
+                    System.out.println(" 2. Consultar usuarios");
+                    System.out.println(" 3. Resultados de pruebas");
+                    System.out.println(" 4. Salir del sistema");
+                    
+                    opcion = input.nextInt();input.nextLine();
+                    
+                    switch (opcion) {
+                    case 1:
+                        
+                        for (int i = 0; i <=7; i++) {	
+                            
+                            System.out.println("     Almacenar contacto  ");
+                            System.out.println("Nombre: ");
+                            String nombre = input.nextLine();
+                            System.out.println("telefono: ");
+                            String telefono =input.nextLine();
+                            System.out.println("Aprobo la prueba (si/no) : ");
+                            String resultadoPrueba = input.nextLine();
+                            
+                            
+                            EjercicioVII	p = new EjercicioVII(nombre, telefono, resultadoPrueba);
+                            datos[i]=p;
+                        }
+                        
+                        break;
+                        
+                    case 2:
+                        System.out.println("        Buscar Contacto    ");
+                        System.out.println(" Escriba el nombre del usuario a buscar: ");
+                        String nombreBuscar = input.nextLine();
+                        
+                        for(int i = 0; i <= datos.length; i++){
+                            if(datos[i].getNombre().equals(nombreBuscar)){
+                            System.out.println("El usuario consultado se encuentra inscrito en el curso con los siguientes datos");
+                            System.out.println("   Nombre: "+ datos[i].getNombre()+ "     Telefono: "+datos[i].getTelefono());
+                            
+                            break;
+                            }else{
+                                System.out.println("El usuario no se encuentra registrado");
+                                 break;
+                            }
+                        }
+                         
+                        break;
+                        
+                    case 3:
+                        System.out.println("        Resultados    ");
+                        System.out.println(" Escriba el nombre del usuario ");
+                        String nombreConsultar = input.nextLine();
+                        
+                        for(int i = 0; i <= datos.length; i++){
+                            if(datos[i].getNombre().equals(nombreConsultar)){
+                                System.out.println("El usuario " + datos[i].getResultadoPrueba()+" aprobo el curso");
+                                break;
+                            }
+                        }
+                        break;
+                    default: 
+                        break;
+                    }
+                }while(opcion!=4);
+            }
+        }
+
+    </pre>
+    <button type="button" onclick="ocultar('seccion8','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+           
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion9')"><h3> <b> GitHub </b> </h3></button>
+        <article id="seccion9" class="estiloDescripcion">
+        <p> <h4 class="descripcion">El desarollo de los anteriores ejercicios se ecuentra en el repositorio de GitHub: talleresSofka-I-II-III-IV, en la rama: Talleres, carpeta: Taller3</h4></p>
+        <a href="https://github.com/lorenafajardo/talleresSofka-I-II-III-IV.git">Acceso a repositorio GitHub</a>
+        <br><br><button type="button" onclick="ocultar('seccion9','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>
+
+<footer>
+    <a href="../portafolio.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller1</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    
+    <header><h3>Taller 1: Variables e Impresión</h3> </header>
+<p>Ejercicios escritos en PSeInt con el perfil Estricto.</p>
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+        <article id="seccion1" class="estiloDescripcion">
+            <p> <h4 class="descripcion">Realizar un programa el cual solicite su nombre y apellidos.</i> </h4></p>
+        
+            <pre class="codigo">
+                Proceso EjercicioUno
+                    
+                    Definir nombre Como Caracter;
+                    Definir apellidos Como Caracter;
+                    
+                    Escribir "Por favor diligencie la información solicitada ";
+                    Escribir " Nombre: ";
+                    Leer nombre;
+                    Escribir " Apellidos: ";
+                    Leer apellidos;
+                    
+                FinProceso
+            </pre>
+            <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>
+        <hr>
+        <section>
+            <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+            <article id="seccion2" class="estiloDescripcion">
+                <p> <h4 class="descripcion">Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</i> </h4></p>
+            
+                <pre class="codigo">
+                    Proceso EjercicioDos
+	
+                        Definir nombre Como Caracter;
+                        Definir apellidos Como Caracter;
+                        Definir edad Como Entero;
+                        Definir estatura Como Real;
+                        
+                        Escribir "Por favor diligencie la información solicitada ";
+                        Escribir " Nombre: ";
+                        Leer nombre;
+                        Escribir " Apellidos: ";
+                        Leer apellidos;
+                        Escribir " Edad: ";
+                        Leer edad;
+                        Escribir " Estatura: ";
+                        Leer estatura;
+                        
+                    FinProceso
+                </pre>
+                <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+            </article>
+        </section>
+            <hr>
+
+            <section>
+                <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+                <article id="seccion3" class="estiloDescripcion">
+                    <p> <h4 class="descripcion">Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h4></p>
+                
+                    <pre class="codigo">
+                        Proceso EjercicioTres
+	
+                            Definir nombre Como Caracter;
+                            Definir apellidos Como Caracter;
+                            Definir nombreMama Como Caracter;
+                            Definir apellidosMama Como Caracter;
+                            Definir nombrePapa Como Caracter;
+                            Definir apellidosPapa Como Caracter;
+                            
+                            Escribir "Por favor diligencie la información solicitada ";
+                            Escribir " Nombre: ";
+                            Leer nombre;
+                            Escribir " Apellidos: ";
+                            Leer apellidos;
+                            Escribir " Nombre de su madre: ";
+                            Leer nombreMama;
+                            Escribir " Apellidos de su madre: ";
+                            Leer apellidosMama;
+                            Escribir " Nombre de su padre: ";
+                            Leer nombrePapa;
+                            Escribir " Apellidos de su padre: ";
+                            Leer apellidosPapa;
+                            
+                            Escribir "Yo ", nombre, " ", apellidos, ", soy hijo de ", nombreMama, " ", apellidosMama, " y ", nombrePapa, " ", apellidosPapa;
+                            
+                        FinProceso
+                    </pre>
+                    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+                </article>
+            </section>
+                <hr>
+
+                <section>
+                    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+                    <article id="seccion4" class="estiloDescripcion">
+                        <p> <h4 class="descripcion">Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el 
+                            <br> siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</h4></p>
+                    
+                        <pre class="codigo">
+                            Proceso ejercicioCuatro
+	
+                                Definir ciudad Como Caracter;
+                                Definir pais Como Caracter;
+                                
+                                Escribir "Por favor diligencie la siguiente información";
+                                Escribir "Nombre del Pais: ";
+                                Leer pais;
+                                Escribir "Ciudad capital:";
+                                Leer ciudad;
+                                
+                                Escribir "La ciudad ", ciudad, ", es la capital del pais ", pais; 
+                                
+                            FinProceso
+                        </pre>
+                        <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+                    </article>
+                </section>
+                    <hr>
+
+                    <section>
+                        <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+                        <article id="seccion5" class="estiloDescripcion">
+                            <p> <h4 class="descripcion">Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe 
+                                e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</h4></p>
+                        
+                            <pre class="codigo">
+                                Proceso ejercicioCinco
+	
+                                    Definir nombreMascota Como Caracter;
+                                    Definir edad Como Entero;
+                                    Definir tipo Como Caracter;
+                                    Definir nombrePropietario Como Caracter;
+                                    
+                                    Escribir "Por favor diligencie la siguiente información correpondiente a su mascota ";
+                                    Escribir "Nombre de la mascota: ";
+                                    Leer nombreMascota;
+                                    Escribir "Edad (años): ";
+                                    Leer edad;
+                                    Escribir "Tipo de mascota (Perro, Gato, pez, Hamster etc) ";
+                                    Leer tipo;
+                                    Escribir "Nombre del propietario: ";
+                                    Leer  nombrePropietario;
+                                    
+                                    Escribir  nombreMascota, " es un(a) ", tipo, ", el cual, tiene ", edad, " años de edad, y ", nombrePropietario, " es actualmente su dueño(a)";
+                                    
+                                FinProceso
+                            </pre>
+                            <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+                        </article>
+                    </section>
+                        <hr>
+
+                        <section>
+                            <button  class="titulo" type="button" onclick="mostrar('seccion6')"><h3> <b> Video </b> </h3></button>
+                            <article id="seccion6" class="estiloDescripcion">
+                                <p> <h4 class="descripcion">Explicación de los ejercicios</h4></p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/0L4NmcY671U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <br><br>
+                                <button type="button" onclick="ocultar('seccion6','descripcionOculta')">Cerrar</button>
+                            </article>
+                        </section>
+
+<footer>
+    <a href="../portafolio.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+
+</body>
+</html>

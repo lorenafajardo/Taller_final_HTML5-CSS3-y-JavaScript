@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia laboral</title>
+    <link rel="stylesheet" href="../css/estilosHV.css">
+    <script src="../js/javascript.js"></script>
+</head>
+<body id="bodyStyle" onload="main()">
+    <header>
+        <h2>Experiencia Laboral</h2>
+    </header>
+
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h4>Practicante <br> Alcaldía Municipal de Sibundoy <br>(Septiembre 2020 – Marzo 2021) </h4></button> 
+        
+        <article id="seccion1" class="estiloDescripcion" >
+            <h5 class="descripcion"> Desarrollo de actividades relacionadas con los programas y proyectos para la implementación del 
+            <br> plan de gestión integral de residuos sólidos -PGIRS del municipio de Sibundoy.</h5>
+            <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+        </article>
+    </section> 
+   
+    <hr>
+   
+    <section>  
+        <button   class="titulo" type="button" onclick="mostrar('seccion2')"> <h4>Apoyo en desarrollo web <br> CLEAR MINDS <br> (Junio 2021 – Diciembre 2021)</h4></button> 
+        <article id="seccion2" class="estiloDescripcion">
+        <h5 class="descripcion">Apoyo en la gestión del desarrollo de aplicaciones Java/Java EE y la experiencia en el ciclo de 
+            <br> vida completo del desarrollo de software, desde el concepto y el diseño hasta las pruebas. </h5>
+            <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>  
+
+    <hr>
+   
+    <section>     
+        
+        <button class="titulo" type="button" onclick="mostrar('seccion3')"><h4>Freelance <br> REMOTASK<br>(Abril 2019 – Agosto 2019) </h4></button>
+        <article id="seccion3" class="estiloDescripcion">
+            <h5 class="descripcion"> Desarrollo de tareas de anotación 2D Y 3D</h5>
+        <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+        </article>
+    </section> 
+
+    <hr>
+
+    <section> 
+        <button class="titulo" type="button" onclick="mostrar('seccion4')"><h4> Freelance<br> Academia Plus <br>(Marzo 2018 – Julio 2018) </h4></button>
+        <article id="seccion4" class="estiloDescripcion">
+            <h5 class="descripcion">Prestación de asesoría a estudiantes universitarios</h5>
+        <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>     
+
+    <footer>
+        <a href="../HV/HojadeVida.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+    <section style="text-align-last: right;">
+            <h7>Cambiar estilo</h7>
+        <button type="button" onclick="cambiarColor1('body')" style="background-color:darkcyan"> . </button>
+        <button type="button" onclick="cambiarColor2('body')" style="background-color: lightslategray">.</button>
+        <button type="button" onclick="cambiarColor3('body')" style="background-color: rgb(212, 198, 171)">.</button>
+    </section>
+    </footer>
+
+
+</body>
+</html>

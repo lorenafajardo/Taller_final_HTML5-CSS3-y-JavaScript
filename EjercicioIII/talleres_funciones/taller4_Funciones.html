@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 4:Taller de arreglos en modo funciones</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    <header><h3>Taller 4: Arreglos modo funciones</h3></header>
+<p>Organizar todos los puntos del taller de arreglos en modo funciones</p>
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+    <article id="seccion1" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</i> </h4></p>
+    <img src="../imagenes/taller4_img1.PNG" height="150px">
+    <pre class="codigo">
+   
+    SubProceso arreglov <- capturai(vector)
+        Definir arreglov, i Como Entero;
+        Para i<-0 Hasta 4 Con Paso 1 Hacer
+            Escribir "Por favor, esciba un numero";
+            Leer vector[i];
+        FinPara
+    FinSubProceso
+    
+    
+    Proceso EjercicioI
+        Definir vector, i, creacionv Como Entero;
+        
+        Dimension vector[5];
+        creacionv <- capturai(vector);
+        
+        Para i<-0 Hasta 4 Hacer
+            Escribir "[ ", i, " ] = ",vector[i];
+        FinPara
+        
+    FinProceso
+    
+    </pre>    
+    <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+    <article id="seccion2" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</i> </h4></p>
+    <img src="../imagenes/taller4_img2.PNG" height="60px">
+    <pre class="codigo">
+        
+    SubProceso arregloNumeros <- mostrari(arreglo)
+        Definir arregloNumeros, i, num Como Entero;
+        i<-0;
+        Mientras i<=19 Hacer
+            num <- azar(100);
+            arreglo[i] <- num;
+            Escribir Sin Saltar num, " - ";
+            i<-i+1;
+        FinMientras
+    FinSubProceso
+    
+    SubProceso pares <- mostrarii(arreglo)
+        Definir pares, i Como Entero;
+        Para i<-0 Hasta 19 Hacer
+            si arreglo[i] % 2 = 0 Entonces
+                Escribir Sin Saltar  arreglo[i], " - ";
+            FinSi
+        FinPara
+    FinSubProceso
+    
+    SubProceso impares <- mostrariii(arreglo)
+        Definir impares, i Como Entero;
+        Para i<-0 Hasta 19 Hacer
+            si (arreglo[i]+1) % 2 = 0 Entonces
+                Escribir Sin Saltar  arreglo[i], " - ";
+            FinSi
+        FinPara
+    FinSubProceso
+        
+    Proceso EjercicioII
+        Definir arreglo, num, i, arregloLleno, numerosPares, numerosImpares Como Entero;
+        Dimension arreglo[20];
+        
+        Escribir "Arreglo - 20 numeros aleatorios";
+        arregloLleno <- mostrari(arreglo);
+        Escribir "";
+        
+        Escribir  "Números pares: ";
+        numerosPares <- mostrarii(arreglo);
+        Escribir " ";
+        
+        Escribir  "Números Impares: ";
+        numerosImpares <- mostrariii(arreglo);
+        Escribir " ";
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+    <article id="seccion3" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</i> </h4></p>
+
+    <pre class="codigo">
+    
+    SubProceso primos <- mostrari( contador, num)
+        Definir primos Como Entero;
+    
+        si contador<=2 Entonces
+            Escribir Sin Saltar num,  "    ";
+        FinSi
+    FinSubProceso
+    
+    Proceso EjercicioIII
+        Definir num, i, contador, numerosPrimos  Como Entero;
+    
+        Para num <- 1 Hasta 1000 Hacer
+            contador<-0;
+            i <- 1;
+            Mientras i <= num Hacer
+                si (num % i)=0 Entonces
+                    contador <-contador+1;
+                FinSi
+                i<-i+1;
+            FinMientras
+            
+            numerosPrimos <- mostrari(contador, num);
+            num<-num+1;
+        FinPara
+        Escribir" ";
+    FinProceso   
+
+    </pre>    
+    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+    <article id="seccion4" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</i> </h4></p>
+    <img src="../imagenes/taller4_img4.PNG" height="220px">
+    <pre class="codigo">
+       
+    SubProceso matrizOriginal <- mostrari(matriz)
+        Definir matrizOriginal, fila, columna Como Entero;
+        para fila<- 0 hasta 3 Hacer
+            para columna<-0 hasta 4 Hacer
+                Escribir Sin Saltar matriz[fila,columna], "   ";
+            FinPara
+            Escribir "";
+        FinPara
+    FinSubProceso
+    
+    SubProceso convertirMatriz <- procesoi(matriz)
+        Definir convertirMatriz,fila, columna, modificador Como Entero; 
+        para fila<- 0 hasta 3 Hacer
+            si fila = 1 o fila = 3 Entonces
+                modificador<- 4;
+                para columna<-0 hasta 4 Hacer
+                    matriz[fila,columna]<-matriz[fila,columna] + modificador;
+                    modificador <- modificador -2;
+                FinPara
+            FinSi
+        FinPara 
+    FinSubProceso
+    
+    SubProceso matrizConvertida <- mostrarii(matriz)
+        Definir matrizConvertida, fila, columna Como Entero; 
+        para fila<- 0 hasta 3 Hacer
+            para columna<-0 hasta 4 Hacer
+                Escribir Sin Saltar matriz[fila,columna], "   ";
+            FinPara
+            Escribir "";
+        FinPara
+    FinSubProceso
+    
+    
+    Proceso EjercicioIV
+        
+        Definir matriz, fila, columna, modificador, matrizOriginal, convertirMatriz, 
+        matrizConvertida  Como Entero;
+        
+        Dimension matriz[4,5];
+        
+        matriz[0,0] <- 01;
+        matriz[0,1] <- 02;
+        matriz[0,2] <- 03;
+        matriz[0,3] <- 04;
+        matriz[0,4] <- 05;
+        matriz[1,0] <- 06;
+        matriz[1,1] <- 07;
+        matriz[1,2] <- 08;
+        matriz[1,3] <- 09;
+        matriz[1,4] <- 10;
+        matriz[2,0] <- 11;
+        matriz[2,1] <- 12;
+        matriz[2,2] <- 13;
+        matriz[2,3] <- 14;
+        matriz[2,4] <- 15;
+        matriz[3,0] <- 16;
+        matriz[3,1] <- 17;
+        matriz[3,2] <- 18;
+        matriz[3,3] <- 19;
+        matriz[3,4] <- 20;
+        
+        Escribir "          Matriz original      "; 
+        matrizOriginal <- mostrari(matriz);
+        
+        Escribir "";
+        Escribir "          Matriz convertida     "; 
+        convertirMatriz <- procesoi(matriz);
+        matrizConvertida <- mostrarii(matriz);
+        
+    FinProceso
+
+    </pre>    
+    <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+    <article id="seccion5" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Se debe de imprimir el siguiente cuadro. El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</i> </h4></p>
+    <img src="../imagenes/taller4_img5.PNG" height="220px">
+    <pre class="codigo">
+    
+    SubProceso tabla <- mostrari()
+        Definir tabla Como Caracter;
+        Definir fila, columna Como Entero;	
+        
+        para fila<- 1 hasta 10 Hacer
+            para columna<-1 hasta 10 Hacer
+                Escribir Sin Saltar columna, "x", fila, "       ";
+            FinPara
+            Escribir "";
+        FinPara
+    FinSubProceso
+    
+    SubProceso numColumna <- capturai()
+        Definir numColumna Como Entero;
+        Escribir "Multiplicando ";
+        leer numColumna;
+    FinSubProceso
+    
+    SubProceso numFila <- capturaii()
+        Definir numFila Como Entero;
+        Escribir "Multiplicador ";
+        leer numFila;
+    FinSubProceso
+
+    Proceso EjercicioV
+	
+	Definir matriz Como Caracter;
+	Definir fila, columna, NumColumna, NumFila, producto  Como Entero;
+	
+	Definir tabla Como Caracter;
+	
+	Dimension matriz[10,10];
+	
+	Escribir "                      Tabla de muliplicación      "; 
+	
+	tabla <- mostrari();
+	
+	Escribir  "";
+	Escribir "  Para conocer el resultado por favor digite el numero del multiplicando ( Primer factor) y despues el multiplicador (Segundo factor) ";
+	Escribir  "";
+	NumColumna <- capturai();
+	NumFila <- capturaii();
+	
+	producto <- mostrarii(NumFila, NumColumna);
+
+FinProceso
+    
+    </pre>    
+    <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+                    
+<footer>
+<a href="../talleres/taller5.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+</body>
+</html>

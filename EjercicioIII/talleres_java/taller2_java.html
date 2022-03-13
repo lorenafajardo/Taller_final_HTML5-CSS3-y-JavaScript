@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 2: Condicionales en java</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    <header><h3>Taller 2: Taller de condicionales en Java</h3> </header>
+<p></p>
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+    <article id="seccion1" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</i> </h4></p>
+    <p><i>Clase EjercicioI, donde se capturan los datos y se declara el metodo</i></p>
+
+    <pre class="codigo">
+        
+        package Entidades;
+
+        import java.util.Scanner;
+
+        public class EjercicioI {
+            private int edad;
+            private Scanner input;
+            
+            public int capturaEdad(){
+            input = new Scanner(System.in);
+            System.out.println("Por favor, escriba su edad: ");
+            edad = input.nextInt();
+            return edad;
+            }	
+        }
+    </pre>    
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+            <pre class="codigo">
+                package Main;
+
+        import Entidades.EjercicioI;
+
+        public class MainEjercicioI {
+            
+
+            public static void main(String[] args) {
+                EjercicioI ejecutar = new EjercicioI();
+                
+                if (ejecutar.capturaEdad()>=18){
+                    System.out.println(" Usted es mayor de edad ");
+                }else{
+                    System.out.println(" Usted es menor de edad ");
+                }
+            }
+        }
+            </pre>
+    <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+    <article id="seccion2" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</i> </h4></p>
+    <p><i>Clase EjercicioII, donde se capturan los datos y se declara el metodo</i></p>
+            
+    <pre class="codigo">
+        
+        package Entidades;
+
+        import java.util.Scanner;
+        
+        public class EjercicioII {
+        
+                private int edad;
+                private Scanner input;
+                
+                public int capturaEdad(){
+                input = new Scanner(System.in);
+                System.out.println("Por favor, escriba su edad: ");
+                edad = input.nextInt();
+                return edad;
+                }		
+            }
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo</i></p>
+            <pre class="codigo">
+
+            package Main;
+
+             import Entidades.EjercicioII;
+
+                    public class MainEjercicioII {
+
+                        public static void main(String[] args) {
+                    EjercicioII ejecutar = new EjercicioII();
+                            
+                            if (ejecutar.capturaEdad()<=18){
+                                System.out.println("Usted aun es un nińo(a)");
+                            }else{
+                                System.out.println("Usted ya no pertenece a la categoria nińo ");
+                            }
+                        }
+                    }   
+            </pre>
+    <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+    <article id="seccion3" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h4></p>
+    <p></i>Clase EjercicioIII, donde se capturan los datos y se declara el metodo</i></p>
+                
+    <pre class="codigo">
+        
+        package Entidades;
+
+        import java.util.Scanner;
+
+        public class EjercicioIII {
+            
+            private String nombre;
+            private String apellido;
+            private int edad;
+            private Scanner input;
+            
+            
+            public EjercicioIII() {
+                // TODO Auto-generated constructor stub
+            }
+
+            public String getNombre() {
+                return nombre;
+            }
+
+            public void setNombre(String nombre) {
+                this.nombre = nombre;
+            }
+
+            public String getApellido() {
+                return apellido;
+            }
+
+            public void setApellido(String apellido) {
+                this.apellido = apellido;
+            }
+
+            public int getEdad() {
+                return edad;
+            }
+
+            public void setEdad(int edad) {
+                this.edad = edad;
+            }
+
+            public void capturaDatos(){
+            input = new Scanner(System.in);
+            System.out.println("Por favor, diligencie la siguiente información ");
+            System.out.println("Nombre: ");
+            setNombre(input.nextLine());
+            System.out.println("Apellido: ");
+            setApellido(input.nextLine());
+            System.out.println("Edad: ");
+            setEdad(input.nextInt());
+            }
+        }                
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+            <pre class="codigo">
+
+                package Main;
+
+                import Entidades.EjercicioIII;
+                
+                public class MainEjercicioIII {
+                
+                    public static void main(String[] args) {
+                        
+                        EjercicioIII datos = new EjercicioIII();
+                        
+                        datos.capturaDatos();
+                        
+                        if (datos.getEdad()>=18){
+                            System.out.println(datos.getNombre()+ " "+ datos.getApellido()+ " usted es mayor de edad, por lo tanto puede entrar a la fiesta");
+                        }else{
+                            System.out.println(datos.getNombre()+ " "+ datos.getApellido()+ " usted es menor de edad, por lo tanto no puede entrar a la fiesta");
+                        }
+                    }
+                }
+
+            </pre>
+    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+    <article id="seccion4" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h4></p>
+    <p><i>Clase EjercicioIV, donde se capturan los datos y se declara el metodo</i></p>
+
+    <pre class="codigo">
+
+        package Entidades;
+
+        import java.util.Arrays;
+        import java.util.Scanner;
+
+        public class EjercicioIV {
+            
+            public void alquiler(){
+                
+                String[] peliculas ={"1.venon", "2.Spiderman", "3.It", "4.Saw" };
+                Scanner input = new Scanner(System.in);
+                
+            
+                System.out.println();
+                System.out.println("    Bienvenido a La video Tienda ");
+                System.out.println("Seleccione la opcion a realizar: ");
+                System.out.println("1. Alquilar pelicula ");
+                System.out.println("2. Consultar pelicula ");
+                System.out.println("3. Recepción pelicula ");
+                
+                int opcion=input.nextInt();
+                
+                if (opcion == 1){
+                    System.out.println("Peliculas disponibles");
+                    System.out.println(Arrays.toString(peliculas));
+                    System.out.println("Escriba el número de pelicula a alquiler");
+                    int opcionPelicula = input.nextInt();
+                    System.out.println("La pelicula " + peliculas[opcionPelicula-1] + ", fue alquilada con exito");
+                    peliculas[opcionPelicula-1] = "";
+                }
+                
+                if (opcion == 2){
+                    
+                    System.out.println("  Peliculas Disponibles ");
+                    System.out.println();
+                    System.out.println(Arrays.toString(peliculas));
+                    
+                }
+
+                if (opcion == 3){
+                    
+                    System.out.println("Quiere recibir la pelicula en la tienda (1.si/2.no)");
+                    int respuesta = input.nextInt();
+                    
+                    if (respuesta == 1){
+                        System.out.println();
+                        System.out.println("Realice las anotaciones o novedades pertinentes");
+                    }else {
+                        System.out.println("La pelicula llegara a su casa");
+                    }            
+                }
+            }    
+        }                   
+                        
+    </pre>
+    <p>Clase main, donde se ejecuta el metodo </p>
+            <pre class="codigo">
+
+                package Main;
+
+                import Entidades.EjercicioIV;
+
+                public class MainEjercicioIV {
+
+                    public static void main(String[] args) {
+                        
+                        EjercicioIV ejecutar = new EjercicioIV();
+                        
+                        ejecutar.alquiler();
+                    }
+                }
+            </pre>
+    <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+    <article id="seccion5" class="estiloDescripcion">
+    <p> <h4 class="descripcion">La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</h4></p>
+    <p><i>Clase EjercicioV, donde se capturan los datos y se declara el metodo</i></p>
+
+    <pre class="codigo">
+    
+    package Entidades;
+
+    import java.util.Scanner;
+
+    public class EjercicioV {
+        
+    public void alquiler(){
+		
+		String[] medicamentos ={"1. Alcohol", "2. Gel atibacterial", "3. Antigripal" };
+		Scanner input = new Scanner(System.in);
+		
+	
+		System.out.println();
+		System.out.println("   Bienvenido a Drogueria Mi Salud  ");
+		System.out.println("Seleccione la opcion a realizar: ");
+		System.out.println("1. Comprar producto ");
+		System.out.println("2. Consultar precios ");
+		System.out.println("3. Devoluciones ");
+		
+		int opcion=input.nextInt();
+		
+		if (opcion == 1){
+			System.out.println("  Caracteristicas de los medicamentos ");
+			
+			System.out.println(medicamentos[0] + ": Frasco Con 700 ml    -    Vía de administración: Topico - Externo");
+			System.out.println(medicamentos[1] + ": Frasco Con 1000 mL  -   Antiséptico y desinfectante de uso externo.");
+			System.out.println(medicamentos[2] + ": Comprimidos para aliviar los síntomas de la gripe que combina paracetamol, cafeína, butetamato y frenilefrina.");
+			
+			System.out.println("Seleccione el número del medicamento a comprar");
+			int opcionMedicamento=input.nextInt();
+			System.out.println("Compra Exitosa");
+		}
+		
+		if (opcion == 2){
+			
+			System.out.println("  Precios ");
+			System.out.println(" 1. Alcohol  -   $3.600" );
+			System.out.println(" 2. Gel antibacterial -  $8.000");
+			System.out.println(" 3. Antigripal  -  $11.000");
+		}
+
+		if (opcion == 3){
+			
+			System.out.println("Proceso de Devolución");
+			System.out.println("Por favor, diligencie la siguiente infomacion para realizar la devolución del producto ");
+			
+			System.out.println("Numero de referecia");
+			int referecia =input.nextInt();
+			System.out.println();
+			System.out.println("Devolución del producto con referecia "+ referecia + " exitosa");
+				
+		}
+	}
+}
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo</i> </p>
+            <pre class="codigo">
+               
+                package Main;
+
+                import Entidades.EjercicioV;
+
+                    public class MainEjercicioV {
+
+                    public static void main(String[] args) {
+                            EjercicioV ejecutar = new EjercicioV();
+                            
+                            ejecutar.alquiler();
+                        }
+                    }
+            </pre>
+    <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+     <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion6')"><h3> <b>Ejercicio 6 </b> </h3></button>
+    <article id="seccion6" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</h4></p>
+    <p><i>Clase EjercicioVI, donde se capturan los datos y se declara el metodo</i></p>
+             
+    <pre class="codigo">
+        package Entidades;
+
+        import java.util.Scanner;
+        
+        public class EjercicioVI {
+            
+            private String placa;
+            private String fecha;
+            private String observaciones;
+            private String novedades;
+            private String arreglos;
+            
+            public EjercicioVI(String placa, String fecha, String observaciones) {
+                super();
+                this.placa = placa;
+                this.fecha = fecha;
+                this.observaciones = observaciones;
+            }
+        
+            public EjercicioVI(String placa, String fecha, String novedades, String arreglos) {
+                super();
+                this.placa = placa;
+                this.fecha = fecha;
+                this.novedades = novedades;
+                this.arreglos = arreglos;
+            }
+        
+            public String getPlaca() {
+                return placa;
+            }
+        
+            public void setPlaca(String placa) {
+                this.placa = placa;
+            }
+        
+            public String getFecha() {
+                return fecha;
+            }
+        
+            public void setFecha(String fecha) {
+                this.fecha = fecha;
+            }
+        
+            public String getObservaciones() {
+                return observaciones;
+            }
+        
+            public void setObservaciones(String observaciones) {
+                this.observaciones = observaciones;
+            }
+        
+            public String getNovedades() {
+                return novedades;
+            }
+        
+            public void setNovedades(String novedades) {
+                this.novedades = novedades;
+            }
+        
+            public String getArreglos() {
+                return arreglos;
+            }
+    
+            public void setArreglos(String arreglos) {
+                this.arreglos = arreglos;
+            }
+        }                             
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+            <pre class="codigo">
+
+                package Main;
+
+                import java.util.ArrayList;
+                import java.util.Arrays;
+                import java.util.Scanner;
+                
+                import Entidades.EjercicioVI;
+                
+                public class MainEjercicioVI {
+                
+                    public static void main(String[] args) {
+                            
+                            ArrayList<EjercicioVI> lista = new ArrayList<EjercicioVI>();
+                            Scanner input = new Scanner(System.in);
+                            
+                            int opcion =0;
+                            
+                            do{
+                                System.out.println();
+                            System.out.println("     Taller El Maquinista");
+                            System.out.println("Por favor, ingrese la opción a realizar:");
+                            System.out.println("1.Ingreso de motocicleta");
+                            System.out.println("2.Salida de motocicleta");
+                            System.out.println("3.Salir");
+                            
+                             opcion = input.nextInt(); input.nextLine();
+                            
+                            if (opcion == 1){
+                                
+                                System.out.println("Placa de la motocicleta: ");
+                                String placa = input.nextLine();
+                                System.out.println("Dia de ingreso: "); 
+                                String fechaIngreso = input.nextLine();
+                                System.out.println( "Observaciones realizadas: ");
+                                String observaciones = input.nextLine();
+                                System.out.println(" Registro Exitoso");
+                
+                                EjercicioVI a = new EjercicioVI(placa, fechaIngreso, observaciones);
+                                
+                                lista.add(a);
+                                
+                            }
+                
+                                if (opcion == 2){
+                                    
+                                    System.out.println("Placa de la motocicleta: ");
+                                    String placa2 = input.nextLine();
+                                    System.out.println("Dia de salida: "); 
+                                    String fechaSalida = input.nextLine();
+                                    System.out.println( "Novedades: ");
+                                    String novedades = input.nextLine();
+                                    System.out.println( "arreglos realizados: ");
+                                    String arreglos = input.nextLine();
+                
+                                    EjercicioVI b = new EjercicioVI(placa2, fechaSalida, novedades, arreglos);
+                                }
+                            }while (opcion!=3);  
+                    }                
+                }
+        
+            </pre>
+
+    <button type="button" onclick="ocultar('seccion6','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion7')"><h3> <b>Ejercicio 7 </b> </h3></button>
+    <article id="seccion7" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</h4></p>
+    <p><i>Clase EjercicioVII, donde se capturan los datos y se declara el metodo</i></p>
+   
+    <pre class="codigo">
+
+    package Entidades;
+
+    import java.util.Scanner;
+
+    public class EjercicioVII {
+
+	private double estatura;
+	private double peso;
+	
+	public double getEstatura() {
+		return estatura;
+	}
+	public void setEstatura(double estatura) {
+		this.estatura = estatura;
+	}
+	public double getPeso() {
+		return peso;
+	}
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+	
+	
+	public void datos(){
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("   Secretaría de Salud Municipal ");
+		System.out.println("Diligecie la siguiente información");
+		System.out.println("Estatura: ");
+		double e= input.nextDouble();
+		setEstatura(e);
+		System.out.println("Peso: ");
+		double p = input.nextDouble();
+		setPeso(p);	
+	}
+}                                        
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+            <pre class="codigo">
+
+                package Main;
+
+                import java.util.Scanner;
+                
+                import Entidades.EjercicioVII;
+                
+                public class MainEjercicioVII {
+                
+                    public static void main(String[] args) {
+                        
+                        EjercicioVII ejecutar = new EjercicioVII();
+                        
+                        ejecutar.datos();
+                        
+                        double imc = ejecutar.getPeso() /Math.pow(ejecutar.getEstatura(),2);
+                        
+                        if(imc <= 18.5){
+                            System.out.println("El valor correspondiennte a su IMC es " + imc + " y se ecuentra en el rango de bajo peso");
+                        }
+                        if(18.5 < imc && imc <= 24.9){
+                            System.out.println("El valor correspondiennte a su IMC es " + imc + " y se ecuentra en el rango de peso normal");
+                        }
+                        if(25 <= imc && imc <= 29.9){
+                            System.out.println("El valor correspondiennte a su IMC es " + imc + " y se ecuentra en el rango de sobrepeso");
+                        }
+                        if(30 <= imc){
+                            System.out.println("El valor correspondiennte a su IMC es " + imc + " y se ecuentra en el rango de bajo obeso");
+                        }
+                    }
+                }
+            </pre>
+    <button type="button" onclick="ocultar('seccion7','descripcionOculta')">Cerrar</button>
+    </article> 
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion8')"><h3> <b>Ejercicio 8 </b> </h3></button>
+    <article id="seccion8" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</h4></p>
+    <p><i>Clase EjercicioVIII, donde se capturan los datos y se declara el metodo</i></p>
+                                
+    <pre class="codigo">
+
+        package Entidades;
+
+        import java.util.ArrayList;
+
+        public class EjercicioVIII {
+
+            private String sabor;
+            private int cantidad;
+            private String decoracion;
+            private int valorPagar;
+            
+            public String getSabor() {
+                return sabor;
+            }
+            public void setSabor(String sabor) {
+                this.sabor = sabor;
+            }
+            public int getCantidad() {
+                return cantidad;
+            }
+            public void setCantidad(int cantidad) {
+                this.cantidad = cantidad;
+            }
+            public String getDecoracion() {
+                return decoracion;
+            }
+            public void setDecoracion(String decoracion) {
+                this.decoracion = decoracion;
+            }
+            public int getValorPagar() {
+                return valorPagar;
+            }
+            public void setValorPagar(int valorPagar) {
+                this.valorPagar = valorPagar;
+            }	
+        }          
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+            <pre class="codigo">
+
+                package Main;
+
+                import java.util.ArrayList;
+                import java.util.Arrays;
+                import java.util.Iterator;
+                import java.util.Scanner;
+                
+                import com.sun.xml.internal.bind.v2.runtime.RuntimeUtil.ToStringAdapter;
+                
+                import Entidades.EjercicioVIII;
+                
+                public class MainEjercicioVIII {
+                
+                    public static void main(String[] args) {
+                        
+                        Scanner input = new Scanner(System.in);
+                        EjercicioVIII p = new EjercicioVIII();
+                        
+                        int opcion = 0;
+                        
+                        do{
+                        System.out.println();
+                        System.out.println("                ----------- Bienvenido ------------");
+                        System.out.println("Por favor, seleccione la opción a realizar") ;
+                        System.out.println(" 1. Registrar pedido ");
+                        System.out.println(" 2. Tortas disponibles ");
+                        System.out.println(" 3. Registro de ventas diarias ");
+                        System.out.println(" 4. Salir ");
+                        
+                         opcion =input.nextInt();
+                        
+                        if (opcion==1){
+                            System.out.println("Elija las caracteisticas del pedido");
+                            System.out.println("Sabor: ");
+                            p.setSabor(input.nextLine());
+                            System.out.println("Decoración: ");
+                            p.setDecoracion(input.nextLine());
+                            System.out.println("Cantidad (porciones) : ");
+                            p.setCantidad(input.nextInt());
+                            System.out.println("Valor a pagar: ");
+                            p.setValorPagar(input.nextInt());
+                            
+                        System.out.println("Pedido registrado con exito");
+                        }
+                        
+                        if (opcion ==2){
+                            System.out.println("    Tortas disponibles");
+                            String[] tortas = {"1.Tres leches", "  2.chocolate", "  3.cafe", "  4.vaiilla", "  5.Arequipe"}; 
+                            System.out.println(Arrays.toString(tortas));
+                        }
+                        
+                        if(opcion==3){
+                            System.out.println("Registrar venta 1. si/ 2. no");
+                            int venta = input.nextInt();
+                            int ventas=0;
+                            while (venta == 1) {
+                                ventas = ventas +1;
+                                System.out.println("venta registada");
+                                break;
+                            } 
+                                
+                        } 
+                        
+                        }while (opcion !=4);
+                        
+                        System.out.println("   Vuelva pronto");
+                        }
+                    }
+            </pre>
+    <button type="button" onclick="ocultar('seccion8','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion9')"><h3> <b>Ejercicio 9 </b> </h3></button>
+    <article id="seccion9" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h4></p>
+    <p><i>Clase EjercicioIX, donde se capturan los datos y se declara el metodo</i></p>
+
+    <pre class="codigo">
+
+        package Entidades;
+
+        public class EjercicioIX {
+        
+            private double area ;
+            private double largo ;
+            private double ancho ;
+            private double base ;
+            private double altura ;
+            private double baseMayor ;
+            private double baseMenor ;
+            public double getArea() {
+                return area;
+            }
+            public void setArea(double area) {
+                this.area = area;
+            }
+            public double getLargo() {
+                return largo;
+            }
+            public void setLargo(double largo) {
+                this.largo = largo;
+            }
+            public double getAncho() {
+                return ancho;
+            }
+            public void setAncho(double ancho) {
+                this.ancho = ancho;
+            }
+            public double getBase() {
+                return base;
+            }
+            public void setBase(double base) {
+                this.base = base;
+            }
+            public double getAltura() {
+                return altura;
+            }
+            public void setAltura(double altura) {
+                this.altura = altura;
+            }
+            public double getBaseMayor() {
+                return baseMayor;
+            }
+            public void setBaseMayor(double baseMayor) {
+                this.baseMayor = baseMayor;
+            }
+            public double getBaseMenor() {
+                return baseMenor;
+            }
+            public void setBaseMenor(double baseMenor) {
+                this.baseMenor = baseMenor;
+            }   
+        }
+                       
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+            <pre class="codigo">
+                package Main;
+
+                import java.util.Scanner;
+                
+                import Entidades.EjercicioIX;
+                
+                public class MainEjercicioIX {
+                
+                    public static void main(String[] args) {
+                        
+                        Scanner input = new Scanner(System.in);
+                        EjercicioIX m = new EjercicioIX();
+                        
+                        
+                        
+                        System.out.println("    --------- Calculadora de Areas -------------");
+                        System.out.println(" Por favor, seleccione la figura geometrica a calcular el area");
+                        System.out.println( " 1. Rectangulo");
+                        System.out.println( " 2. Triangulo");
+                        System.out.println( " 3. Trapecio");
+                        
+                        int opcion = input.nextInt(); input.nextLine();
+                        
+                        if(opcion==1){
+                            System.out.println(" Escriba las medidas: ");
+                            System.out.println(" Largo (cm) ");
+                            m.setLargo(input.nextDouble());
+                            System.out.println (" Ancho (cm)");
+                            m.setAncho(input.nextDouble());
+                            
+                            double area = m.getLargo() * m.getAncho();
+                            
+                            System.out.println("El area del rectangulo es "+ area + "cm"); 
+                        }
+                        
+                        if(opcion==2){
+                            System.out.println(" Escriba las medidas: ");
+                            System.out.println(" Base (cm) ");
+                            m.setBase(input.nextDouble());
+                            System.out.println (" Altura (cm)");
+                            m.setAltura(input.nextDouble());
+                            
+                            double area = (m.getBase() * m.getAltura())/2;
+                            
+                            System.out.println("El area del triangulo es "+ area + "cm"); 
+                        }
+                        
+                        if(opcion==3){
+                            System.out.println(" Escriba las medidas: ");
+                            System.out.println(" Base mayor (cm) ");
+                            m.setBaseMayor(input.nextDouble());
+                            System.out.println(" Base menor (cm) ");
+                            m.setBaseMenor(input.nextDouble());
+                            System.out.println (" Altura (cm)");
+                            m.setAltura(input.nextDouble());
+                            
+                            double area = ((m.getBaseMayor()+ m.getBaseMenor()) * m.getAltura())/2;
+                            
+                            System.out.println("El area del trapecio es "+ area + "cm"); 
+                        }
+                    }
+                }
+            </pre>
+    <button type="button" onclick="ocultar('seccion9','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+    
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion10')"><h3> <b>Ejercicio 10 </b> </h3></button>
+    <article id="seccion10" class="estiloDescripcion">
+    <p> <h4 class="descripcion"> El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</h4></p>
+    <p><i>Clase EjercicioX, donde se capturan los datos y se declara el metodo</i></p>
+                   
+    <pre class="codigo">
+
+        package Entidades;
+
+        public class EjercicioX {
+        
+            private String usuario;
+            private int dineroIngreso;
+            private int dineroRetiro;
+            
+            
+            public String getUsuario() {
+                return usuario;
+            }
+            public void setUsuario(String usuario) {
+                this.usuario = usuario;
+            }
+            public int getDineroIngreso() {
+                return dineroIngreso;
+            }
+            public void setDineroIngreso(int dineroIngreso) {
+                this.dineroIngreso = dineroIngreso;
+            }
+            public int getDineroRetiro() {
+                return dineroRetiro;
+            }
+            public void setDineroRetiro(int dineroRetiro) {
+                this.dineroRetiro = dineroRetiro;
+            }
+        }    
+
+    </pre>
+    <p><i>Clase main, donde se ejecuta el metodo </i></p>
+            <pre class="codigo">
+                
+                package Main;
+
+                import java.util.Scanner;
+                
+                import Entidades.EjercicioX;
+                
+                public class MainEjercicioX {
+                
+                    public static void main(String[] args) {
+                        
+                        Scanner input = new Scanner(System.in);
+                        EjercicioX u = new EjercicioX();
+                        int opcion = 0;
+                        int saldo =0;
+                        
+                        do{
+                            System.out.println();
+                        System.out.println("             ---------- Bienvenido a Su Banco Fiel -----------");
+                        
+                        System.out.println("Por favor, selecione la opcion a realizar");
+                        System.out.println(" 1. Ingreso de dinero");
+                        System.out.println(" 2. Retiro de dinero");
+                        System.out.println(" 3. Consulta de saldo");
+                        System.out.println(" 3. Salir");
+                        
+                         opcion = input.nextInt(); input.nextLine();
+                
+                         if (opcion==1){
+                             System.out.println( "Diligencie la información");
+                             System.out.println("Nombre del titular:");
+                            u.setUsuario(input.nextLine());
+                                System.out.println("Cantidad de dinero a ingresar:  ");
+                                u.setDineroIngreso(input.nextInt());
+                                
+                                if (u.getDineroIngreso() > 0){
+                                    saldo = saldo + u.getDineroIngreso();
+                                    System.out.println(" Dinero ingresado correctamente");
+                                    }
+                                else{
+                                    System.out.println("Cantidad de dinero incorrecta ");
+                                    }
+                                    
+                    }
+                         
+                         if (opcion==2){
+                             System.out.println( "Digite la cantidad de dineo a retirar");
+                             u.setDineroRetiro(input.nextInt());
+                                
+                                if (u.getDineroRetiro() <= saldo){
+                                    saldo = saldo - u.getDineroRetiro();
+                                    System.out.println(" Dinero listo para retirar");
+                                    }
+                                else{
+                                    System.out.println("Saldo insuficiente");
+                                    }
+                                    
+                         }
+                         
+                         if (opcion==3){
+                             System.out.println( "Su saldo es $" + saldo);
+                         }
+                
+                        }while(opcion!= 4);
+                    }
+                }
+            </pre>
+
+    <button type="button" onclick="ocultar('seccion10','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+    <hr>
+
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion11')"><h3> <b> GitHub </b> </h3></button>
+        <article id="seccion11" class="estiloDescripcion">
+        <p> <h4 class="descripcion">El desarollo de los anteriores ejercicios se ecuentra en el repositorio de GitHub: talleresSofka-I-II-III-IV, en la rama: Talleres, carpeta: Taller2</h4></p>
+        <a href="https://github.com/lorenafajardo/talleresSofka-I-II-III-IV.git">Acceso a repositorio GitHub</a>
+        <br><br><button type="button" onclick="ocultar('seccion11','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>
+                        
+<footer>
+    <a href="../portafolio.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+</body>
+</html>

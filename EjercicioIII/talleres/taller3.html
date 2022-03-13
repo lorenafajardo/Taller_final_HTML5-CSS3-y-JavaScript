@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller3</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/funciones.js"></script>
+</head>
+<body>
+    <header> <h3> Taller 3: Ciclos</h3></header>
+<p>Ejercicios escritos en PSeInt con el perfil Estricto.</p>
+    <section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h3> <b>Ejercicio 1 </b> </h3></button>
+    <article id="seccion1" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar la siguiente figura por medio del ciclo Para</i> </h4></p>
+    <img src="../imagenes/taller3_img1.PNG" height="150px">
+    <pre class="codigo">
+        Proceso EjercicioI
+	
+        Definir i Como Entero;
+        Definir a Como Entero;
+        Definir n Como Entero;
+        
+        n <- 10;
+        
+        Para i<-1 Hasta n Con Paso 1 Hacer
+            Para a <- 1 Hasta i Con Paso 1 Hacer
+                Escribir Sin Saltar "*";
+            FinPara
+            
+            Escribir " ";	
+        FinPara
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h3> <b>Ejercicio 2 </b> </h3></button>
+    <article id="seccion2" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar la siguiente figura por medio del ciclo Mientras - Hacer</i> </h4></p>
+    <img src="../imagenes/taller3_img2.PNG" height="150px">
+    <pre class="codigo">
+        Proceso EjercicioII
+	
+        Definir i Como Entero;
+        Definir e Como Entero;;
+        Definir a Como Entero;;
+        Definir n Como Entero;
+    
+        n <- 10;
+        i<- 0;
+        
+        Mientras i <= n Hacer
+            e<- 0;
+            a<- 0;
+            Mientras e < n-i Hacer
+                Escribir Sin Saltar " ";
+                e <- e+1;
+            FinMientras
+            Mientras a < i Hacer
+                Escribir Sin Saltar "*";
+                a <- a+1;
+            FinMientras
+            Escribir "";
+            i<- i+1;
+        FinMientras
+        
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h3> <b>Ejercicio 3 </b> </h3></button>
+    <article id="seccion3" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</i> </h4></p>
+    <img src="../imagenes/taller3_img3.PNG" height="150px">
+    <pre class="codigo">
+        Proceso EjercicioIII
+	
+        Definir i Como Entero;
+        Definir e Como Entero;;
+        Definir a Como Entero;;
+        Definir n Como Entero;
+        
+        n <- 12;
+        i<- 1;
+    
+        Repetir 
+            e<-1;
+            Repetir
+                Escribir Sin Saltar  " ";
+            e<-e+1;
+        Hasta Que e=(n+1)-i
+        
+            a<-1;
+            Repetir
+                Escribir Sin Saltar "*";
+                a<- a+1;
+            Hasta Que a=i+i
+            
+            Escribir " ";
+            i<- i+1;
+            
+        Hasta Que i=n 
+        
+        i<-1;
+        Repetir
+            e<-1;
+            Repetir
+                Escribir Sin Saltar  " ";
+                e<-e+1;
+            Hasta Que e=11
+            
+            a<-1;
+            Repetir
+                Escribir Sin Saltar "*";
+                a<- a+1;
+            Hasta Que a=4
+            
+            Escribir " ";
+            i<- i+1;
+        Hasta Que i=3
+        
+        i<-1;
+        Repetir 
+            e<-1;
+            Repetir
+                Escribir Sin Saltar  " ";
+                e<-e+1;
+            Hasta Que e=n-(i+1)
+            
+            a<-1;
+            Repetir
+                Escribir Sin Saltar "*";
+                a<- a+1;
+            Hasta Que a=4+(2*i)
+            
+            Escribir " ";
+            i<- i+1;
+            
+        Hasta Que i=3 
+        
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion4')"><h3> <b>Ejercicio 4 </b> </h3></button>
+    <article id="seccion4" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</i> </h4></p>
+    <img src="../imagenes/taller3_img4.PNG" height="150px">
+    <pre class="codigo">
+        Proceso EjercicioIV
+	
+        Definir nro Como Entero;
+        Definir i Como Entero;
+        Definir producto Como Entero;
+        
+        Escribir "             Tabla de multiplicar";
+        Escribir " Por favor, ingrese el número de la tabla de multiplicar que desea ver";
+        
+        Leer nro;
+        
+        para i<-0 Hasta 10 Hacer
+            producto <- nro*i;
+            Escribir nro, " x ", i, " = ", producto;
+        FinPara
+        
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion4','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion5')"><h3> <b>Ejercicio 5 </b> </h3></button>
+    <article id="seccion5" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</i> </h4></p>
+    <img src="../imagenes/taller3_img5.PNG" height="100px">
+    <pre class="codigo">
+        Proceso EjercicioV
+	
+        Definir opcion Como Entero;
+        Definir nombre Como Caracter;
+        
+        Repetir
+        
+            escribir "                Menu de usuario         ";
+            Escribir " 1. Captura nombre ";
+            Escribir " 2. Saludar persona ";
+            Escribir " 3. Salir del sistema ";
+        
+        leer opcion;
+        
+        si opcion=1 Entonces
+            Escribir " Por favor, escriba su nombre: ";
+            Leer nombre;
+            Escribir "           --------------------------";
+        FinSi
+        
+        si opcion=2 Entonces
+            Escribir " Cordial saludo ", nombre, ", bienvenido al sistema";
+            Escribir "           --------------------------";
+        FinSi
+    
+            
+    Hasta Que opcion = 3
+    
+    Escribir "                    Vuelva pronto   ";
+    Escribir "           --------------------------";
+        
+        
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion5','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion6')"><h3> <b>Ejercicio 6 </b> </h3></button>
+    <article id="seccion6" class="estiloDescripcion">
+    <p> <h4 class="descripcion">Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</i> </h4></p>
+    <pre class="codigo">
+        Proceso EjercicioVI
+	
+        Definir opcion Como Entero;
+        Definir nombrei, nombreii, nombreiii, contactoBuscar, contactoEliminar Como Caracter;
+        Definir telefonoi, telefonoii, telefonoiii Como Caracter;
+        Definir organizacioni, organizacionii, organizacioniii Como Caracter;
+        Definir nombrebuscar Como Caracter;
+        
+        Definir i Como Entero;
+        
+        Repetir
+            
+        Escribir "      ";
+        Escribir "                     Bienvenido   ";
+        Escribir "  Por favor, seleccione una opción: ";
+        Escribir " 1. Almacenar contacto";
+        Escribir " 2. Buscar contacto";
+        Escribir " 3. Eliminar contacto";
+        Escribir " 4. Salir";
+        
+        Leer opcion;
+        
+        Segun opcion Hacer
+            1: 
+                Escribir "     Almacenar contacto  ";
+                para i<-0 Hasta 2 Hacer
+                    si (i=0) Entonces
+                        Escribir "";
+                        Escribir "Nombre: ";
+                        leer nombrei;
+                        Escribir "telefono: ";
+                        leer telefonoi;
+                        Escribir "organizacion: ";
+                        leer organizacioni;
+                    FinSi
+                    si (i=1) Entonces
+                        Escribir "";
+                        Escribir "Nombre: ";
+                        leer nombreii;
+                        Escribir "telefono: ";
+                        leer telefonoii;
+                        Escribir "organizacion: ";
+                        leer organizacionii;
+                    FinSi
+                    si (i=2) Entonces
+                        Escribir "";
+                        Escribir "Nombre: ";
+                        leer nombreiii;
+                        Escribir "telefono: ";
+                        leer telefonoiii;
+                        Escribir "organizacion: ";
+                        leer organizacioniii;
+                    FinSi
+                FinPara
+                
+            2: 
+                Escribir "        Buscar Contacto    ";
+                Escribir " Escriba el nombre del contacto a buscar: ";
+                leer contactoBuscar;
+                
+                si ( (contactoBuscar = nombrei) o (contactoBuscar = nombreii) o (contactoBuscar = nombreiii)) Entonces
+                    
+                    si (contactoBuscar = nombrei) Entonces
+                        Escribir "    Información del contacto";
+                        Escribir "Nombre ", nombrei,"    Telefono: ", telefonoi, "    Organizacion: ",organizacioni;
+                    FinSi
+                    
+                    si (contactoBuscar = nombreii) Entonces
+                        Escribir "    Información del contacto";
+                        Escribir "Nombre ", nombreii,"    Telefono: ", telefonoii, "    Organizacion: ",organizacionii;
+                    FinSi
+                    
+                    si (contactoBuscar = nombreiii) Entonces
+                        Escribir "    Información del contacto";
+                        Escribir "Nombre ", nombreiii,"    Telefono: ", telefonoiii, "    Organizacion: ",organizacioniii;
+                    FinSi
+                SiNo
+                    Escribir "El contacto no se encuenntra almacenado";
+                FinSi
+            3:
+                Escribir "        Eliminar Contacto    ";
+                Escribir " Escriba el nombre del contacto a eliminar: ";
+                leer contactoEliminar;
+                
+                si ( (contactoEliminar = nombrei) o (contactoEliminar = nombreii) o (contactoEliminar = nombreiii))
+                 Entonces
+                    
+                    si (contactoEliminar = nombrei) Entonces
+                        nombrei<- "";
+                        telefonoi<- ""; 
+                        organizacioni <- "";
+                    FinSi
+                    
+                    si (contactoEliminar = nombreii) Entonces
+                        nombreii<- "";
+                        telefonoii<- ""; 
+                        organizacionii <- "";
+                    FinSi
+                    
+                    si (contactoEliminar = nombreiii) Entonces
+                        nombreiii<- "";
+                        telefonoiii<- ""; 
+                        organizacioniii <- "";
+                    FinSi
+                    Escribir  " El contacto se ha eliminado con exito"; 
+                SiNo
+                    Escribir "El contacto no se encuentra almacenado";
+                FinSi
+        FinSegun
+    
+        Hasta Que opcion = 4  
+        
+        Escribir "                   Vuelva pronto";
+        
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion6','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion7')"><h3> <b>Ejercicio 7 </b> </h3></button>
+    <article id="seccion7" class="estiloDescripcion">
+    <p> <h4 class="descripcion">El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos</i> </h4></p>
+    <pre class="codigo">
+        Proceso EjercicioVII
+	
+        Definir placai, marcai, nombrei, telefonoi, placaii, marcaii, nombreii, telefonoii, 
+        placaiii, marcaiii, nombreiii, telefonoiii, placaiv, marcaiv, nombreiv, telefonoiv, 
+        placav, marcav, nombrev, telefonov  Como Caracter;
+        Definir placabuscar, retiroi, retiroii, retiroiii,retiroiv, retirov, busquedai, busquedaii,
+         busquedaiii, busquedaiv, busquedav Como Caracter;
+    
+        Definir opcionMenu, opcionIngresar Como Entero;
+        Definir i Como Entero;
+        
+        Repetir
+            Escribir "";
+            Escribir "                Parqueadero El Guardian  ";
+            Escribir "Seleccione la opcion a realizar";
+            Escribir " 1. Ingresar vehiculo";
+            Escribir " 2. Retirar vehiculo";
+            Escribir " 3. Consultar vehiculo";
+            Escribir " 4. Salir del sistema";
+            
+            Leer opcionMenu;
+            
+            segun opcionMenu Hacer
+                
+                1:
+                    
+                    Para i<-0 Hasta 4 Con Paso 1 Hacer
+                        si (i = 0) Entonces
+                            Escribir "Por favor, diligencie la siguiente información: ";
+                            Escribir " ";
+                                Escribir "             Vehiculo 1 ";
+                                Escribir "Placa del vehiculo: ";
+                                leer placai;
+                                Escribir "Marca del vehiculo";
+                                Leer marcai;
+                                Escribir "Nombre del propietario: ";
+                                Leer nombrei;
+                                Escribir "Telefono: ";
+                                Leer telefonoi;
+                            FinSi
+                            
+                            si (i = 1) Entonces
+                                Escribir "             Vehiculo 2 ";
+                                Escribir "Placa del vehiculo: ";
+                                leer placaii;
+                                Escribir "Marca del vehiculo";
+                                Leer marcaii;
+                                Escribir "Nombre del propietario: ";
+                                Leer nombreii;
+                                Escribir "Telefono: ";
+                                Leer telefonoii;
+                            FinSi
+                            
+                            si (i = 2) Entonces
+                                Escribir "             Vehiculo 3 ";
+                                Escribir "Placa del vehiculo: ";
+                                leer placaiii;
+                                Escribir "Marca del vehiculo";
+                                Leer marcaiii;
+                                Escribir "Nombre del propietario: ";
+                                Leer nombreiii;
+                                Escribir "Telefono: ";
+                                Leer telefonoiii;
+                            FinSi
+                            
+                            si (i = 3) Entonces
+                                Escribir "             Vehiculo 4 ";
+                                Escribir "Placa del vehiculo: ";
+                                leer placaiv;
+                                Escribir "Marca del vehiculo";
+                                Leer marcaiv;
+                                Escribir "Nombre del propietario: ";
+                                Leer nombreiv;
+                                Escribir "Telefono: ";
+                                Leer telefonoiv;
+                            FinSi
+                            
+                            si (i = 4) Entonces
+                                Escribir "             Vehiculo 5 ";
+                                Escribir "Placa del vehiculo: ";
+                                leer placav;
+                                Escribir "Marca del vehiculo";
+                                Leer marcav;
+                                Escribir "Nombre del propietario: ";
+                                Leer nombrev;
+                                Escribir "Telefono: ";
+                                Leer telefonov;
+                            FinSi
+                            Escribir " ";
+                        FinPara
+                2:
+                    Escribir "Escriba la placa del vehiculo a retirar";
+                    Leer placabuscar;
+                    
+                        si (placabuscar <> placai y placabuscar <> placaii y placabuscar <> placaiii y placabuscar 
+                        <> placaiv y placabuscar <> placav) Entonces
+                            Escribir "El vehiculo no se encuetra en el parqueadero ";
+                        FinSi
+                    
+                        si placabuscar = placai Entonces
+                            Escribir "";
+                            Escribir "Se retirará el siguiente vehiculo ";
+                            Escribir "Placa: ", placai, "  Marca: ",marcai,"  Propietario: ", nombrei," 
+                             Telefono: ", telefonoi;
+                            placai<-"";
+                            marcai<-"";
+                            nombrei<-"";
+                            telefonoi<-"";
+                            Escribir "Vehiculo retirado"; 
+                        FinSi
+                        
+                        si placabuscar = placaii Entonces
+                            Escribir "";
+                            Escribir "Se retirará el siguiente vehiculo ";
+                            Escribir "Placa: ", placaii, "  Marca: ",marcaii,"  Propietario: ", nombreii,"  
+                            Telefono: ", telefonoii;
+                            placaii<-"";
+                            marcaii<-"";
+                            nombreii<-"";
+                            telefonoii<-"";
+                            Escribir "Vehiculo retirado"; 
+                        FinSi
+                        
+                        si placabuscar = placaiii Entonces
+                            Escribir "";
+                            Escribir "Se retirará el siguiente vehiculo ";
+                            Escribir "Placa: ", placaiii, "  Marca: ",marcaiii,"  Propietario: ", nombreiii," 
+                             Telefono: ", telefonoiii;
+                            placaiii<-"";
+                            marcaiii<-"";
+                            nombreiii<-"";
+                            telefonoiii<-"";
+                            Escribir "Vehiculo retirado"; 
+                        FinSi
+                        
+                        si placabuscar = placaiv Entonces
+                            Escribir "";
+                            Escribir "Se retirará el siguiente vehiculo ";
+                            Escribir "Placa: ", placaiv, "  Marca: ",marcaiv,"  Propietario: ", nombreiv,"  
+                            Telefono: ", telefonoiv;
+                            placaiv<-"";
+                            marcaiv<-"";
+                            nombreiv<-"";
+                            telefonoiv<-"";
+                            Escribir "Vehiculo retirado"; 
+                        FinSi
+                        
+                        si placabuscar = placav Entonces
+                            Escribir "";
+                            Escribir "Se retirará el siguiente vehiculo ";
+                            Escribir "Placa: ", placav, "  Marca: ",marcav,"  Propietario: ", nombrev,
+                            "  Telefono: ", telefonov;
+                            placav<-"";
+                            marcav<-"";
+                            nombrev<-"";
+                            telefonov<-"";
+                            Escribir "Vehiculo retirado"; 
+                        FinSi
+                    
+                3:
+                        Escribir "Escriba la placa del vehiculo a consultar: ";
+                        Leer placabuscar;
+                    
+                        si (placabuscar <> placai y placabuscar <> placaii y placabuscar <> placaiii y placabuscar 
+                        <> placaiv y placabuscar <> placav) Entonces
+                            Escribir "";
+                            Escribir "El vehiculo no se encuetra en el parqueadero ";
+                        FinSi
+                        
+                        si placabuscar = placai Entonces
+                            Escribir "  Informacion del vehiculo cosultado ";
+                            Escribir "Placa: ", placai, "  Marca: ",marcai,"  Propietario: ", nombrei,
+                            "  Telefono: ", telefonoi;
+                        FinSi
+                        
+                        si placabuscar = placaii Entonces
+                            Escribir "  Informacion del vehiculo cosultado ";
+                            Escribir "Placa: ", placaii, "  Marca: ",marcaii,"  Propietario: ", nombreii,
+                            "  Telefono: ", telefonoii;
+                        FinSi
+                        
+                        si placabuscar = placaiii Entonces
+                            Escribir "  Informacion del vehiculo cosultado ";
+                            Escribir "Placa: ", placaiii, "  Marca: ",marcaiii,"  Propietario: ", nombreiii,
+                            "  Telefono: ", telefonoiii;
+                        FinSi
+                        
+                        si placabuscar = placaiv Entonces
+                            Escribir "  Informacion del vehiculo cosultado ";
+                            Escribir "Placa: ", placaiv, "  Marca: ",marcaiv,"  Propietario: ", nombreiv,
+                            "  Telefono: ", telefonoiv;
+                        FinSi
+                        
+                        si placabuscar = placav Entonces
+                            Escribir "  Informacion del vehiculo cosultado ";
+                            Escribir "Placa: ", placav, "  Marca: ",marcav,"  Propietario: ", nombrev,
+                            "  Telefono: ", telefonov;
+                        FinSi
+                        
+            FinSegun
+        Hasta Que opcionMenu=4
+    
+        Escribir "";
+        Escribir "                  Vuelva pronto";
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion7','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+<hr>
+
+<section>
+    <button  class="titulo" type="button" onclick="mostrar('seccion8')"><h3> <b>Ejercicio 8 </b> </h3></button>
+    <article id="seccion8" class="estiloDescripcion">
+    <p> <h4 class="descripcion">La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</i> </h4></p>
+    <pre class="codigo">
+        Proceso EjercicioVII
+	
+        Definir nombrei, telefonoi, resultadoi, nombreii, telefonoii, resultadoii,  nombreiii, telefonoiii, 
+        resultadoiii,  nombreiv, telefonoiv, resultadoiv,  nombrev, telefonov, resultadov, nombrevi, 
+        telefonovi,resultadovi, nombrevii, telefonovii, resultadovii, nombreviii, telefonoviii, 
+        resultadoviii  Como Caracter;
+
+        Definir buscarUsuario Como Caracter;
+        
+        Definir opcionMenu, opcionIngresar Como Entero;
+        Definir i Como Entero;
+        
+        Repetir
+            Escribir "";
+            Escribir "           Bienvenido a la escuela automovilística - El Maestro ";
+            Escribir " Seleccione la opción a realizar ";
+            Escribir " 1. Registrar  usuario";
+            Escribir " 2. Consultar usuarios";
+            Escribir " 3. Resultados de pruebas";
+            Escribir " 4. Salir del sistema";
+            
+            Leer opcionMenu;
+            
+            segun opcionMenu Hacer
+                
+                1:
+                    Escribir "Por favor, diligencie la siguiente información: ";
+                    Para i<-0 Hasta 7 Con Paso 1 Hacer
+                        si (i = 0) Entonces
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombrei;
+                            Escribir "Telefono:";
+                            Leer telefonoi;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadoi;
+                        FinSi
+                        
+                        si (i = 1) Entonces
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombreii;
+                            Escribir "Telefono:";
+                            Leer telefonoii;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadoii;
+                        FinSi
+                        
+                        si (i = 2) Entonces
+                            Escribir "             Registro 3 ";
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombreiii;
+                            Escribir "Telefono:";
+                            Leer telefonoiii;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadoiii;
+                        FinSi
+                        
+                        si (i = 3) Entonces
+                            Escribir "             Registro 4 ";
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombreiv;
+                            Escribir "Telefono:";
+                            Leer telefonoiv;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadoiv;
+                        FinSi
+                        
+                        si (i = 4) Entonces
+                            Escribir "             Registro 5 ";
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombrev;
+                            Escribir "Telefono:";
+                            Leer telefonov;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadov;
+                        FinSi
+                        
+                        si (i = 5) Entonces
+                            Escribir "             Registro 6 ";
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombrevi;
+                            Escribir "Telefono:";
+                            Leer telefonovi;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadovi;
+                        FinSi
+                        
+                        si (i = 6) Entonces
+                            Escribir "             Registro 7 ";
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombrevii;
+                            Escribir "Telefono:";
+                            Leer telefonovii;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadovii;
+                        FinSi
+                        
+                        si (i = 7) Entonces
+                            Escribir "             Registro 8 ";
+                            Escribir "Nombre completo del usuario a registrar: ";
+                            leer nombreviii;
+                            Escribir "Telefono:";
+                            Leer telefonoviii;
+                            Escribir "El usuario aprobo (si/no):";
+                            Leer resultadoviii;
+                        FinSi
+                        Escribir " ";
+                    FinPara
+                2:
+                    Escribir "Escriba el nombre del usuario ";
+                    Leer buscarUsuario;
+    
+                    si buscarUsuario = nombrei Entonces
+                        Escribir "Información del usuario consultado ";
+                        Escribir "Nombre: ", nombrei, "  Telefono: ", telefonoi;
+                    FinSi
+                    
+                    si buscarUsuario = nombreii Entonces
+                        Escribir "Información del usuario consultado ";
+                        Escribir "Nombre: ", nombreii, "  Telefono: ", telefonoii;
+                    FinSi
+                    si buscarUsuario = nombreiii Entonces
+                        Escribir "Información del usuario consultado ";
+                        Escribir "Nombre: ", nombreiii, "  Telefono: ", telefonoiii;
+                    FinSi
+                    
+                    si buscarUsuario = nombreiv Entonces
+                        Escribir "Información del usuario consultado ";
+                        Escribir "Nombre: ", nombreiv, "  Telefono: ", telefonoiv;
+                    FinSi
+                    
+                    si buscarUsuario = nombrev Entonces
+                        Escribir "Información del usuario  consultado ";
+                        Escribir "Nombre: ", nombrev, "Telefono: ", telefonov;
+                    FinSi
+                    
+                    si buscarUsuario = nombrevi Entonces
+                        Escribir "Información del usuario  consultado ";
+                        Escribir "Nombre: ", nombrevi, "Telefono: ", telefonovi;
+                    FinSi
+                    
+                    si buscarUsuario = nombrevii Entonces
+                        Escribir "Información del usuario  consultado ";
+                        Escribir "Nombre: ", nombrevii, "Telefono: ", telefonovii;
+                    FinSi
+                    
+                    si buscarUsuario = nombrev Entonces
+                        Escribir "Información del usuario  consultado ";
+                        Escribir "Nombre: ", nombreviii, "Telefono: ", telefonoviii;
+                    FinSi
+                    
+                    si (buscarUsuario <> nombrei y buscarUsuario <> nombreii y buscarUsuario <> nombreiii 
+                    y buscarUsuario <> nombreiv y buscarUsuario <> nombrev y buscarUsuario <> nombrevi 
+                    y buscarUsuario <> nombrevii y buscarUsuario <> nombreviii) Entonces
+
+                        Escribir "El usuario no se encuetra registrado ";
+                    FinSi
+                    
+                3:
+                    Escribir "               Resultados  de pruebas ";
+                    
+                    Escribir "Escriba el nombre del usuario ";
+                    Leer buscarUsuario;
+                    
+                    si buscarUsuario = nombrei Entonces
+                        si resultadoi = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+                    si buscarUsuario = nombreii Entonces
+                        si resultadoii = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+                    si buscarUsuario = nombreiii Entonces
+                        si resultadoiii = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+                    si buscarUsuario = nombreiv Entonces
+                        si resultadoiv = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+                    si buscarUsuario = nombrev Entonces
+                        si resultadov = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+                    si buscarUsuario = nombrevi Entonces
+                        si resultadovi = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+                    si buscarUsuario = nombrevii Entonces
+                        si resultadovii = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+                    si buscarUsuario = nombreviii Entonces
+                        si resultadoviii = "si" Entonces
+                            Escribir " Usted aprobo el curso";
+                        sino 
+                            Escribir " Usted no aprobo el curso";
+                        FinSi
+                    FinSi
+                    
+            FinSegun
+        Hasta Que opcionMenu=4
+        
+        Escribir "";
+        Escribir "                  Vuelva pronto";
+    FinProceso
+    </pre>    
+    <button type="button" onclick="ocultar('seccion8','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion9')"><h3> <b> Video </b> </h3></button>
+        <article id="seccion9" class="estiloDescripcion">
+        <p> <h4 class="descripcion">Explicación de ejercicio 6</h4></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/i7wuFpiNqiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br>
+        <button type="button" onclick="ocultar('seccion9','descripcionOculta')">Cerrar</button>
+        </article>
+    </section>
+                        
+<footer>
+    <a href="../portafolio.html"> <img src="../Imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+</footer>
+
+<hr>
+
+</body>
+</html>

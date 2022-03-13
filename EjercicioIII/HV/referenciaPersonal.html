@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referecias personales</title>
+    <link rel="stylesheet" href="../css/estilosHV.css">
+    <script src="../js/javascript.js"></script>
+</head>
+
+<body id="bodyStyle" onload="main()">
+
+    <header><h2>Referencias Personales</h2></header>
+
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion1')"><h4>SEBASTIAN ESCOBAR CICERI </h4></button>
+        <article id="seccion1" class="estiloDescripcion">
+        <p> <h4 class="descripcion">Coordinador Operativo <br> Manpower Group</h4></p>
+        <p><h5 class="descripcion">Carrera 10 # 03-63  <br> Cali, Valle del Cauca <br> +57 320 000 14 33 <br>sebasescobarciceri6@gmail.com</h5></p>
+        <button type="button" onclick="ocultar('seccion1','descripcionOculta')">Cerrar</button>
+    </article>
+    </section> 
+        <hr>
+    <section >
+        <button  class="titulo" type="button" onclick="mostrar('seccion2')"><h4>TOMAS VARGAS MONTES </h4></button>
+        <article id="seccion2" class="estiloDescripcion">
+        <p> <h4 class="descripcion">Asesor Soporte Técnico <br> Teleperformance</h4></p>
+        <p><h5 class="descripcion">Carrera 49 # 48-23 <br>Medellín, Antioquia <br> +57 321 678 65 00 <br>tomvargas1990@gmail.com</h5></p>
+        <button type="button" onclick="ocultar('seccion2','descripcionOculta')">Cerrar</button>    
+    </article>
+    </section>
+        <hr>
+    <section>
+        <button  class="titulo" type="button" onclick="mostrar('seccion3')"><h4>CAROLINA FAJARDO DÍAZ</h4></button>
+    <article id="seccion3" class="estiloDescripcion">
+        <p> <h4 class="descripcion">Analista e Commerce <br> Renault SOFASA</h4></p>
+        <p><h5 class="descripcion">Calle 51 # 64 -21  <br> Medellín, Antioquia <br>+57 310 503 10 79<br>carolinafajdi@gmail.com</h5></p>
+        <button type="button" onclick="ocultar('seccion3','descripcionOculta')">Cerrar</button>
+    </article>
+    </section>
+        
+    <footer>
+        <a href="./HojadeVida.html"> <img src="../imagenes/iconoRegreso.png" alt="30" height="30"> </a>
+        <section style="text-align-last: right;">
+            <h7>Cambiar estilo</h7>
+        <button type="button" onclick="cambiarColor1('body')" style="background-color:darkcyan"> . </button>
+        <button type="button" onclick="cambiarColor2('body')" style="background-color: lightslategray">.</button>
+        <button type="button" onclick="cambiarColor3('body')" style="background-color: rgb(212, 198, 171)">.</button>
+    </section>
+    </footer>
+
+</body>
+</html>
