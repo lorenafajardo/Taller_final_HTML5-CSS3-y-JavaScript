@@ -1,0 +1,34 @@
+body{
+   background-image: url("../imagenes/fondo.jpg");
+    width:900px; 
+    text-align-last: center; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+header{
+    background-color: lavender; 
+    font-family: Cambria; 
+    padding: 10px; 
+    margin-block: 10px;
+}
+
+form{
+    font-family:'Arial Narrow';
+    text-align: center;
+}
+
+section{
+    background-color: rgb(199, 204, 204); 
+    padding: 9px; 
+    margin-block: 10px;
+    line-height: 0%;
+    color: darkslategray;
+}
+
+.botones{
+    background-color:lavender; 
+    font-family: Cambria; 
+    padding: 10px; 
+    margin-block: 10px;
+}
